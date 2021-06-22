@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Zyter Health - Admin Member</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/home-styles/home-page-styles.css">
+  <link rel="stylesheet" href="./css/admin-member.css">
+  <script src="../js/all.min.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="./js/common-sections.js"></script>
+  <script src="./js/member-search.js"></script>
+</head>
+<body>
+
+
+<header id="mainHeader"> </header>
+  
+<div class="container-fluid main-content-body homepage-body">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="admin-member-area">
+            <h2>Member Search</h2>
+            <div class="member-search-form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>Member ID</label>
+                        <input type="text" class="txtbox">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label>First Name:</label>
+                        <input type="text" class="txtbox">
+                    </div>
+                    <div class="form-field">
+                        <label>Last Name:</label>
+                        <input type="text" class="txtbox">
+                    </div>
+                    <div class="form-field">
+                        <label>Date of Birth:</label>
+                        <input type="text" class="txtbox">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <button class="btn btn-primary search-btn" onclick="msearchresults()">Search</button>
+                </div>
+            </div>
+        </div> <!-- end of admin-member-area-->
+        <div class="member-search-results-area table-responsive" id="memberResultsGrid">
+            <table class="table">
+                <thead>
+                    <th>Member ID</th>
+                    <th>Member Name</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FL1234567</td>
+                        <td>Robert, Williams</td>
+                        <td>
+                            <a class="btn btn-outline-secondary" href="../index.html">
+                                Login as Member
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <!-- end of member-search-results-area-->
+    </div>    
+  </div>
+</div>
+  <footer class="container-fluid main-footer" id="mainFooter">  
+  </footer>
+
+  
+  <div class="modal fade text-center nal-modal" id="nurseAdviceLine">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h2>Nurse Advice Line</h2>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-body">
+          <div class="nal-content">
+            <h1 class="nal-helpline">
+              For emergency call 611
+            </h1>
+            <h4 class="text-primary">
+              24 hours Nurse Advice Line
+            </h4>
+            <p>
+              Highly trained nurses are available 24 hours a day, 7 days a week. They can speak with you in your language. They will help you to get the care you need. 
+            </p>
+            <fieldset>
+              <legend>Select a State</legend>
+              <select  class="form-control" id="nurseSelectUS" onchange="selectStateUS(this.value)">
+              </select>
+            </fieldset>
+            <div class="text-right my-2">
+              <h5 class="text-secondary">
+                Call 711
+              </h5>
+            </div>
+            <div class="form-group">
+              <h5 class="text-dark" id="statePhoneNo">
+                Call (888) 665-4601
+              </h5>
+            </div>
+            <hr/>
+            <div class="nal-qa">
+              <h2 class="text-primary">
+                When should members goto an Urgent Care Center(UCC)?
+              </h2>
+              <p>Use a UCC for a non-life threatening condition sucn a: </p>
+              <ul>
+                <li>Sore throat, Cough or runny nose</li>
+                <li>Muscle Strains/Sprains</li>
+                <li>Minor Outs/Burns</li>
+                <li>Earache</li>
+                <li>Flashes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade text-center" id="bookAppointment">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header cm-header">
+          <h2>Book an Appointment</h2>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-body">
+          <div class="booking-form">
+            <div id="bookingFormArea">
+                  <div class="form-group">
+                      <span class="form-label">Appointment with</span>
+                      <input class="form-control" type="text" placeholder="Enter Doctor's Name">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <span class="form-label">Select Date</span>
+                          <input class="form-control" type="date">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <span class="form-label">Select Time</span>
+                          <input class="form-control" type="time" placeholder="Mobile Number">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-btn">
+                      <button class="submit-btn" id="bookAppointmentBtn">
+                      Book an Appointment</button>
+                  </div>
+            </div> <!-- end of bookingFormArea-->
+            <div id="bookingSuccess">
+                <h2>Your Appointment is confirmed</h2>
+            </div>
+          </div> <!-- end of booking-form div -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $("#bookingSuccess").hide();
+      $("#bookAppointmentBtn").click(function(){
+        $("#bookingFormArea").hide(100);
+        $("#bookingSuccess").show(100);
+      });
+    })
+  </script>
+  <script src="./../js/custom-zyter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+.admin-member-area h2{
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 0;
+    border-bottom: 1px solid #dadada;
+    text-align: left;
+}
+.member-search-form{
+    padding: 15px;
+    border-bottom: 1px solid #dadada; 
+}
+.member-search-form .form-row{
+    display: flex;
+}
+.member-search-form .form-row .form-field{
+    margin-right: 15px;
+    display: flex;
+    height: 35px;
+    align-items: center;
+}
+.member-search-form .form-row .form-field label{
+    margin: 0 10px 0 0;
+    padding: 0;
+    width: 80px;
+}
+
+.member-search-form .form-row .form-field .txtbox{
+    border: 1px solid #cccccc;
+    width: 120px;
+}
+.member-search-form .form-row .form-field .txtbox:focus{
+    border: 1px solid #9eaaaf;
+}
+.member-search-form .search-btn{
+    position: relative;
+    left: 140px;
+    margin: 10px;
+}
+.member-search-results-area{
+    padding: 15px;
+}
+#memberResultsGrid{ 
+    display: none;
+}
