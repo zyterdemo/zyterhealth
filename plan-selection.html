@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Zyter Health - Plan Selection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/find-doctor.css">
+  <link rel="stylesheet" href="css/treatment-cost-estimator.css">
+  <script src="js/all.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="js/treatment-cost-estimator.js"></script>
+  <script src="js/common-sections.js"></script>
+</head>
+
+<body>
+
+  <header id="mainHeader"> </header>
+
+
+  <div class="container-fluid tce-screen">
+    <div class="row">
+      <div class="col-lg-10 col-md-9 col-sm-9 col-12">
+        <h2>Plan Selection </h2>
+        <!-- <p>Treatment Cost Advisor helps you estimate your costs for hundreds of common conditions, procedures, tests, and health care visits.</p> -->
+        <div class="stepwizard">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step col-xs-3">
+              <a href="#personalDetails" type="button" class="btn btn-success btn-circle">1</a>
+              <p><small>Personal details</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#healthCareNeeds" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+              <p><small>Health care needs</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+              <p><small>Tell us about your health care</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+              <p><small>Tell us about your health care</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+              <p><small>Tell us about your health care</small></p>
+            </div>
+          </div>
+        </div>
+        <form role="form">
+          <div class="card setup-content" id="personalDetails">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-7">
+                  <p>
+                    Amswer the questions to find out if you qualify for help to lower your health care costs.
+                  </p>
+                  <h3>Coverage Year</h3>
+                  <select class="form-control">
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021" selected="selected">2021</option>
+
+                  </select>
+                  <h3 class="mt-4">What is your Zip code? </h3>
+                  <input type="text" class="form-control" placeholder="Ex:90201" />
+                  <h3 class="mt-4">What is your household income per year? <i class="fas fa-info-circle"
+                      aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i></h3>
+                  <input type="text" class="form-control" placeholder="" />
+                  <h3 class="mt-4">How many people are in your household? <i class="fas fa-info-circle"
+                      aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i></h3>
+                  <select class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select>
+
+                  <p class="mt-4">
+                    Enter the age of each person in your household, and tell us if they need coverage.
+                  </p>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h3>Age of head of household:</h3>
+                      <input type="text" class="form-control" placeholder="" />
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="" checked>Needs Coverage?
+                        </label>
+                      </div>
+                      <div class="form-check mt-4">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Pregnant? <i
+                            class="fas fa-info-circle" aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i>
+                        </label>
+                      </div>
+                      <div class="form-check mt-4">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Bling or Disabled? <i
+                            class="fas fa-info-circle" aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-md-6">
+                      <h3>Age of person 2:</h3>
+                      <input type="text" class="form-control" placeholder="" />
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="" checked>Needs Coverage?
+                        </label>
+                      </div>
+                      <div class="form-check mt-4">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Pregnant? <i
+                            class="fas fa-info-circle" aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i>
+                        </label>
+                      </div>
+                      <div class="form-check mt-4">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Bling or Disabled? <i
+                            class="fas fa-info-circle" aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-md-6">
+                      <h3>Age of person 3:</h3>
+                      <input type="text" class="form-control" placeholder="" />
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="" checked>Needs Coverage?
+                        </label>
+                      </div>
+                      <div class="form-check mt-4">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Pregnant? <i
+                            class="fas fa-info-circle" aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i>
+                        </label>
+                      </div>
+                      <div class="form-check mt-4">
+                        <label class="form-check-label">
+                          <input type="checkbox" class="form-check-input" value="">Bling or Disabled? <i
+                            class="fas fa-info-circle" aria-hidden="false" style="color: rgba(17, 29, 197, 0.808);"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-lg-5">
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <a class="float-right btn btn-primary" href="#healthCareNeeds">
+                    Next
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="setup-content" id="healthCareNeeds">
+            <div class="container-fluid main-content-body homepage-body">
+              <div class="row">
+                <div class="col-lg-10 col-md-9 col-sm-9 col-12">
+                  <div class="fd-area">
+                    <div class="fd-header">
+                      <h2>Find a Doctor</h2>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="First Name" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Last Name" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Specialty" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Zip" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/doctor1.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Ricky Watson</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                        <a href="#" class="md-message"></a>
+                                        <a href="#" class="md-phone"></a>
+                                    </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/fdoctor1.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Johnson, Amelia </p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                      <a href="#" class="md-message"></a>
+                                      <a href="#" class="md-phone"></a>
+                                  </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/doctor2.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Will Smith</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                      <a href="#" class="md-message"></a>
+                                      <a href="#" class="md-phone"></a>
+                                  </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/fdoctor2.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Jessica</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                      <a href="#" class="md-message"></a>
+                                      <a href="#" class="md-phone"></a>
+                                  </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/doctor3.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. John Paul</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                        <a href="#" class="md-message"></a>
+                                        <a href="#" class="md-phone"></a>
+                                    </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/fdoctor3.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Julia Fernandes</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                      <a href="#" class="md-message"></a>
+                                      <a href="#" class="md-phone"></a>
+                                  </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/doctor4.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Robert</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                      <a href="#" class="md-message"></a>
+                                      <a href="#" class="md-phone"></a>
+                                  </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="fd-box">
+                          <div class="fd-image">
+                            <img src="./images/fdoctor1.png" />
+                          </div>
+                          <div class="fd-text">
+                            <!--<small>Name</small>-->
+                            <p>Dr. Madona</p>
+                          </div>
+                          <!-- <div class="fd-contact-links">
+                                      <a href="#" class="md-message"></a>
+                                      <a href="#" class="md-phone"></a>
+                                  </div> -->
+                          <div class="fd-btn">
+                            <a class="btn btn-outline-info" href="my-doctor.html">
+                              View Profile
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-12">
+                  <div id="mainRightSection"></div>
+                </div>
+              </div>             
+              <div class="row mt-5 mb-5">
+                <div class="col-md-6">
+                  <a class="btn btn-secondary" href="#healthCareNeeds">
+                    Back
+                  </a>
+                </div>
+                <div class="col-md-6 text-right">
+                  <a class="btn btn-primary" href="#healthCareNeeds">
+                    Next
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card setup-content" id="viewEstimate">
+            <div class="card-body">
+              <h3>Tell us about your health care needs</h3>
+              <div class="col-md-7 p-4" style="background: #8080803b;">
+                Your answers are used to find the best plan option for you
+              </div>
+              <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+              <p class="mt-4">Choose the category that base describe the medical service use you except for the next
+                year. <br />For families, choose the category the best fits the person who probably will need the most
+                medical services next year.</p>
+
+              <div class="covid-checks-area covid-checks-inline">
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">LOW USE: 1 doctor visit and tests:
+                    preventive visits too.
+                  </label>
+                </div><br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">MEDIUM USE: 4-5 doctor visits, tests
+                    and treatment in doctor office.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">HIGH USE: surgery or treatment
+                    outpatient; 6 or more visits and treats.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">VERY HIGH USE: a hospital stay,
+                    outpatient treatment; 6 or more visits and treats.
+                  </label>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <a class="btn btn-secondary" href="#healthCareNeeds">
+                    Back
+                  </a>
+                </div>
+                <div class="col-md-6 text-right">
+                  <a class="btn btn-primary" href="#healthCareNeeds">
+                    View Plans
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="container-fluid main-footer" id="mainFooter">
+  </footer>
+
+</body>
+<script>
+
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+</script>
+
+</html>
