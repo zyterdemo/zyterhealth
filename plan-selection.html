@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/find-doctor.css">
   <link rel="stylesheet" href="css/treatment-cost-estimator.css">
+  <link rel="stylesheet" href="css/plan-selection.css">
   <script src="js/all.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -25,7 +26,7 @@
 
   <div class="container-fluid tce-screen">
     <div class="row">
-      <div class="col-lg-10 col-md-9 col-sm-9 col-12">
+      <div class="col-lg-12 col-md-9 col-sm-9 col-12">
         <h2>Plan Selection </h2>
         <!-- <p>Treatment Cost Advisor helps you estimate your costs for hundreds of common conditions, procedures, tests, and health care visits.</p> -->
         <div class="stepwizard">
@@ -44,11 +45,15 @@
             </div>
             <div class="stepwizard-step col-xs-3">
               <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
-              <p><small>Tell us about your health care</small></p>
+              <p><small>Placeholder</small></p>
             </div>
             <div class="stepwizard-step col-xs-3">
               <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
-              <p><small>Tell us about your health care</small></p>
+              <p><small>Submit and view plan</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewPlans" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+              <p><small>View plans</small></p>
             </div>
           </div>
         </div>
@@ -492,6 +497,42 @@
               </div>
             </div>
           </div>
+          <div class="card setup-content" id="viewPlans">
+            <div class="card-body">
+              <!-- <h3>Plans</h3> -->
+              <div class="row">
+              <div class="col-md-2">
+                <div class="fd-box">                  
+                  <div class="fd-text">
+                      <!--<small>Name</small>-->
+                      <p>Dr. Johnson, Amelia </p>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-10">
+                <div class="fd-box ml-0">                  
+                  <div class="fd-text">
+                      <!--<small>Name</small>-->
+                      <img src="./images/plans/Capture2.PNG" class="imgWidth"/>
+                      <p class="title">Bronze 60 HMO</p>
+                      <p class="subTitle">BRONZE HMO</p>
+                      <p class="dollors mb-1">$226.00</p>
+                      <p class="monthlyPremium1 mb-1">monthly premium</p>
+                      <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                      <p>Primary Care Visits You pay $65</p>
+                      <p>Generic Drugs You pay $18</p>
+                      <p>Yearly Deductible</p>
+                      <p>Total Expense Estimate Lower</p>
+                      <p>Quality Rating</p>
+                      <p>Dr.Olive Gold...</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                  </div>
+              </div>
+            </div>
+            </div>
+            </div>
+           </div>
 
         </form>
       </div>

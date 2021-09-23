@@ -1,0 +1,34 @@
+.imgWidth{
+    width: 120px;
+}
+.subTitle{
+    background: rgb(235, 210, 210);
+    width: 150px;
+    align-items: center;
+    margin-left: 20px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: -8px;
+    font-weight: 600 !important;
+}
+.title{
+    font-size: 11px;
+    color:#0078D3;
+}
+.dollors{
+    font-size: 16px !important;
+    margin-top: -9px;
+}
+.monthlyPremium{  
+  margin-top: -7px;
+  font-size: 12px !important;
+}
+.monthlyPremiumSubTitle{  
+    margin-top: -7px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #4193CE;
+  }
+  .checked {
+    color: orange;
+  }
