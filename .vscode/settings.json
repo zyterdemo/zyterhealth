@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/852f5983-893f-495c-a7b7-a90147cd93e4/resourceGroups/zytermemberportal/providers/Microsoft.Web/sites/zytermemberportal",
+    "appService.deploySubpath": "."
+}
