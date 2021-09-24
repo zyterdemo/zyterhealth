@@ -36,6 +36,9 @@
    width: auto !important;
   }
   .yearlyDeduct{
-    color:#0078D3;
+    color:#0078D3 !important;
     margin-top: -14px;
+  }
+  .colorBlue{
+    color:#0078D3 !important;
   }
