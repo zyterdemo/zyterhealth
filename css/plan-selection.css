@@ -12,7 +12,7 @@
     font-weight: 600 !important;
 }
 .title{
-    font-size: 11px;
+    font-size: 12px !important;
     color:#0078D3;
 }
 .dollors{
@@ -38,7 +38,39 @@
   .yearlyDeduct{
     color:#0078D3 !important;
     margin-top: -14px;
+    font-size: 12px !important;
   }
   .colorBlue{
     color:#0078D3 !important;
+    font-size: 12px !important;
+  }
+  .payInfo{
+    font-size: 12px !important;
+  }
+  .whiteSpace{
+    white-space: pre;
+  }
+  .borderColor{
+    border: 1px solid #403b3b2b;
+  }
+  .btnPadding{
+    padding: 8px;
+  }
+  .btnShadow{
+    box-shadow: 0 0 6px rgb(226 226 226 / 80%);
+  }
+  .filterFont{
+    font-size: 13px !important;
+  }
+  .planType{
+    font-size: 12px !important;
+  }
+  .marginClass{
+    margin-top: .2rem !important;
+  }
+  .marginLeft{
+    margin-left: -31px;
+  }
+  .form-check-input-margin{
+    margin-top: .1rem !important; 
   }
