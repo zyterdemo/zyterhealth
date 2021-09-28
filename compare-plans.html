@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Zyter Health - Plan Selection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/find-doctor.css">
+  <link rel="stylesheet" href="css/treatment-cost-estimator.css">
+  <link rel="stylesheet" href="css/plan-selection.css">
+  <script src="js/all.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="js/treatment-cost-estimator.js"></script>
+  <script src="js/common-sections.js"></script>
+</head>
+
+<body>
+
+  <header id="mainHeader"> </header>
+
+
+  <div class="container-fluid tce-screen mb-4">
+    <div class="row">
+      <div class="col-lg-12 col-md-9 col-sm-9 col-12">
+        <h2>Compare Plans </h2>
+        <!-- <p>Treatment Cost Advisor helps you estimate your costs for hundreds of common conditions, procedures, tests, and health care visits.</p> -->
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">&nbsp;</div>
+      <div class="col-md-3">
+        <div class="fd-box auto_width ml-0" style="width: auto;">
+          <div class="fd-text">
+            <!--<small>Name</small>-->
+            <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+            <p class="title">Bronze 60 HMO</p>
+            <p class="subTitle subTitleSelected mb-4">HMO</p>
+            <p class="dollors mb-1">$226.00</p>
+            <p class="monthlyPremium mb-1">monthly premium</p>
+            <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+            <button type="button" class="btn btn-primary borderColor btnWidth">
+              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="fd-box auto_width ml-0" style="width: auto;">
+          <div class="fd-text">
+            <!--<small>Name</small>-->
+            <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+            <p class="title">Bronze 60 HMO</p>
+            <p class="subTitle subTitleSelected mb-4">HMO</p>
+            <p class="dollors mb-1">$226.00</p>
+            <p class="monthlyPremium mb-1">monthly premium</p>
+            <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+            <button type="button" class="btn btn-primary borderColor btnWidth">
+              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <div class="container-fluid">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link colorBlue" data-toggle="collapse" href="#collapseOne">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color:black;font-weight:700" width="16" height="16"
+                  fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>&nbsp;&nbsp;Summary
+              </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="title mb-1">Total Expense Estimate</p>
+                    <p class="title mb-1">Doctors and Facilities</p>
+                    <p class="title mb-1">Plan Type</p>
+                    <p class="title mb-1">Health Savings Accounts</p>
+                    <p class="title mb-1">Quality Rating</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <p class="title mb-1">$4218.24</p>
+                      <p class="title mb-1">View Directory</p>
+                      <p class="title mb-1">HMD</p>
+                      <p class="title mb-1">No</p>
+                      <p class="title mb-1">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <p class="title mb-1">$4218.24</p>
+                      <p class="title mb-1">View Directory</p>
+                      <p class="title mb-1">HMD</p>
+                      <p class="title mb-1">No</p>
+                      <p class="title">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link colorBlue" data-toggle="collapse" href="#collapseTwo">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color:black;font-weight:700" width="16" height="16"
+                  fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>&nbsp;&nbsp;Doctors Visits
+              </a>
+            </div>
+            <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="mb-4">Primary Care Visit</p>
+                    <p class="mb-4">Specilist Visit</p>
+                    <p class="mb-4">Other Practitoner Officer Visit</p>
+                    <p class="mb-4">Preventive Care/Screening/Immunization</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <p class="mb-1">$16 Copay</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">$75 Copay</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">$35 Copay</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">No Charge</p>
+                      <small class="title">Additional Information</small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <div class="fd-text">
+                        <p class="mb-1">$16 Copay</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">$75 Copay</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">$35 Copay</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">No Charge</p>
+                        <small class="title">Additional Information</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link colorBlue" data-toggle="collapse" href="#collapseTests">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color:black;font-weight:700" width="16" height="16"
+                  fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>&nbsp;&nbsp;Tests
+              </a>
+            </div>
+            <div id="collapseTests" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="mb-4">Laboratory Tests</p>
+                    <p class="mb-4">Xray and Diagnostic Imaging</p>
+                    <p class="mb-4">Imaging (CT/PET Scans, MRIs)</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <p class="mb-1">$16 Copay</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">$75 Copay</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">$35 Copay</p>
+                      <small class="title">Additional Information</small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <div class="fd-text">
+                        <p class="mb-1">$16 Copay</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">$75 Copay</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">$35 Copay</p>
+                        <small class="title">Additional Information</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link colorBlue" data-toggle="collapse" href="#collapseThree">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color:black;font-weight:700" width="16" height="16"
+                  fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>&nbsp;&nbsp;Drugs
+              </a>
+            </div>
+            <div id="collapseThree" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="mb-4">Tier 1 (Most Generic Drugs)</p>
+                    <p class="mb-4">Tier 2 (Prefered Brand Drugs)</p>
+                    <p class="mb-4">Tier 3 (Non-Prefered Brand Drugs)</p>
+                    <p class="mb-4">Tier 4 Specialty Drugs</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <p class="mb-1">$16 Copay after deductable</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">$55 Copay after deductable</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">$55 Copay after deductable</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">20% Copay after deductable</p>
+                      <small class="title">Additional Information</small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <div class="fd-text">
+                        <p class="mb-1">$16 Copay after deductable</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">$55 Copay after deductable</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">$55 Copay after deductable</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">20% Copay after deductable</p>
+                        <small class="title">Additional Information</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link colorBlue" data-toggle="collapse" href="#collapseFour">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color:black;font-weight:700" width="16" height="16"
+                  fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                </svg>&nbsp;&nbsp;Out Patient Services
+              </a>
+            </div>
+            <div id="collapseFour" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="mb-4">Outpatient Facility Fee</p>
+                    <p class="mb-4">Outpatient Surgery Physician/Surgical Services</p>
+                    <p class="mb-4">Outpatient Services Office Visits</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <p class="mb-1">20% Coinsurance</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">20% Coinsurance</p>
+                      <small class="title">Additional Information</small>
+                      <p class="mb-1">20% Coinsurance</p>
+                      <small class="title">Additional Information</small>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="fd-text">
+                      <div class="fd-text">
+                        <p class="mb-1">20% Coinsurance</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">20% Coinsurance</p>
+                        <small class="title">Additional Information</small>
+                        <p class="mb-1">20% Coinsurance</p>
+                        <small class="title">Additional Information</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="container-fluid main-footer" id="mainFooter">
+  </footer>
+
+</body>
+<script>
+
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
