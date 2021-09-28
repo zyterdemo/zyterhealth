@@ -1,0 +1,143 @@
+.rowColor{
+    background-color: #4b0082;
+    height: 50px;
+}
+.rowColorSub{
+    background-color: #4b0082bd;
+}
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {    
+    padding-right: 0px;
+     padding-left: 0px;   
+}
+.row {  
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.inNetworkBG{
+    background-color: #0078D3;
+    color: white;
+    height: 20px;
+
+}
+.fontColorWhite{
+    color: white;
+}
+.fontColorBlack{
+    color: black;
+}
+.colHeight{
+    height: 25px;
+}
+p:after {
+    content: "";
+    display: inline-block !important;
+    width: 100% !important;
+  }
+  .rowHeight{
+      height: 50px !important;
+  }
+  .purpelText{
+    color: #4b0082bd;
+  }
+  .iconbgGreen{
+      color: green;
+  }
+  .marginTopReset{
+      margin-top: -10px;
+  }
+.bgPurpule{
+    background-color:#8b39ab;
+    color: white;
+    height: 45px;
+    padding: 2px;
+}
+.bgPurpuleCompare{
+    background-color:#8b39ab;
+    color: black;   
+    height: 30px;
+   
+}
+.milesFont{
+    font-size: 17px !important;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* .container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: #f3f3f3;
+} */
+
+.card{
+  width: 100%;
+  border: none !important;
+  background: white;
+  box-shadow: 4px 4px 15px rgba(#000, 0.15);
+
+  position : relative;
+  color: #434343;
+}
+
+.card .card__container{
+  /* padding : 2rem; */  
+  width: 100%;
+  height: 310px;
+  background: white;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.card .card__header{
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.card .card__body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.card::before{
+  position: absolute;
+  top:2rem;
+  left:-0.5rem;
+  content: '';
+  background: #712893;
+  height: 28px;
+  width: 28px;
+  transform : rotate(45deg);
+}
+
+.card::after{
+  position: absolute;
+  content: attr(data-label);
+  top: 11px;
+  left: -14px;
+  padding: 0.5rem;
+  width: 30rem;
+  background: #8b39ab;
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+}
+.setWidth{
+    width: 250px;
+}
+.setWidthCompare{
+  width: 150px;
+}
+.setMargins{
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}

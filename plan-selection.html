@@ -505,26 +505,27 @@
               <!-- <h3>Plans</h3> -->
               <div class="row">
                 <div class="col-md-2 heightOverflowy">
-                  <div class="fd-box">
+                  <div class="fd-box addWidth">
                     <div class="fd-text">
-                      <!--<small>Name</small>-->
-                      <table>
-                        <table style="margin-left: 170px;">
-                          <tr>
-                            <td align="right">
-                              <p class="filterFont mb-0"><b><i class="fa fa-minus" aria-hidden="true"
-                                    style="color: #4193CE;"></i></b></p>
-                            </td>
-                          </tr>
-                        </table>
-                        <table style="margin-left: 10px;">
+                      <!--<small>Name</small>-->                                     
+                        <table width="100%">
                           <tr>
                             <td align="left">
-                              <p class="filterFont mb-0"><b>Compare Plans 2 of 3</b></p>
+                              <p class="filterFont mb-0 ml-3"><b>Compare Plans 2 of 3</b></p>
+                            </td>
+                            <td align="right">
+                              <div id="accordion">
+                              <a class="card-link colorBlue" data-toggle="collapse" href="#collapseOne">
+                              <p class="filterFont mb-0 mr-3"><b><i class="fa fa-minus" aria-hidden="true"
+                                style="color: #4193CE;"></i></b>
+                              </p>
+                              </a>
+                              </div>
                             </td>
                           </tr>
                         </table>
-                        <table>
+                        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <table style="margin-left: 10px;">
                           <tr>
                             <td align="left" colspan="2">
                               <p class="filterFont mb-0">
@@ -600,9 +601,10 @@
                             </td>
                           </tr>
                         </table>
+                        </div>
                     </div>
                   </div>
-                  <div class="fd-box">
+                  <div class="fd-box addWidth">
                     <div class="fd-text">
                       <!--<small>Name</small>-->
                       <table style="margin-left: 10px;">
@@ -1239,5 +1241,7 @@
     }
   });
 </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>
