@@ -1,197 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Zyter Health - Profile</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/all.min.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/profile-page-styles.css">
-  <script src="js/all.min.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/common-sections.js"></script>
+    <title>Zyter Health - Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile-page-styles.css">
+    <link rel="stylesheet" href="css/nurse-advice-line.css">
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/common-sections.js"></script>
 </head>
+
 <body>
-  <header id="mainHeader"> </header>
-<div class="container-fluid main-content-body homepage-body">
-    <div class="row">
-        <div class="col-lg-10 col-md-9 col-sm-9 col-12">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 col-sm-4 col-12">
-                  <div class="profile-about-area">
-                      <div class="profile-avatar-area">
-                          <div class="profile-avatar-bg"></div>
-                          <div class="profile-avatar">
-                              <h5>Robert Williams</h5>
-                              <img src="./images/profile1.png"/>
-                          </div>
-                      </div>
-                      <p>Email ID <br/>robert.williams@info.com</p>
-                      <p>Mobile <br/>+1 123 456 7893</p>
-                      <p>Home Phone <br/>+1 240 456 5321</p>
-                      <div class="profile-address-area">
-                          <p>Address <br/>
-                              85 Bay Drive, New Port Richey, FL 34653
-                          </p>
-                      </div>
-                      <div class="profile-percent">
-                          <div class="prow">
-                              <div class="pcol">Personal</div>
-                              <div class="pcol">
-                                  <span>80%</span> Completed
-                                  <progress max="100" value="80"></progress>
-                              </div>
-                          </div>                
-                      </div>
-                      <div class="profile-percent">
-                          <div class="prow">
-                              <div class="pcol">Emergency Contact</div>
-                              <div class="pcol">
-                                  <span>50%</span> Completed
-                                  <progress max="100" value="50"></progress>
-                              </div>
-                          </div>                
-                      </div>
-                      <div class="profile-percent">
-                          <div class="prow">
-                              <div class="pcol">Health Record</div>
-                              <div class="pcol">
-                                  <span>50%</span> Completed
-                                  <progress max="100" value="50"></progress>
-                              </div>
-                          </div>                
-                      </div>
-                  </div>
-                </div>
-                <div class="col-lg-9 col-md-8 col-sm-8 col-12">
-                    <div class="profile-details-container">
-                        <div class="profile-details-header">
-                            <h2>My Profile</h2>
-                            <div class="percent-completed">
-                                <p><span>42%</span> Completed</p>
-                                <progress max="100" value="42"></progress>
+    <header id="mainHeader"> </header>
+    <div class="container-fluid main-content-body homepage-body">
+        <div class="row">
+            <div class="col-lg-10 col-md-9 col-sm-9 col-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-12">
+                        <div class="profile-about-area">
+                            <div class="profile-avatar-area">
+                                <div class="profile-avatar-bg"></div>
+                                <div class="profile-avatar">
+                                    <h5>Robert Williams</h5>
+                                    <img src="./images/profile1.png" />
+                                </div>
+                            </div>
+                            <p>Email ID <br />robert.williams@info.com</p>
+                            <p>Mobile <br />+1 123 456 7893</p>
+                            <p>Home Phone <br />+1 240 456 5321</p>
+                            <div class="profile-address-area">
+                                <p>Address <br />
+                                    85 Bay Drive, New Port Richey, FL 34653
+                                </p>
+                            </div>
+                            <div class="profile-percent">
+                                <div class="prow">
+                                    <div class="pcol">Personal</div>
+                                    <div class="pcol">
+                                        <span>80%</span> Completed
+                                        <progress max="100" value="80"></progress>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-percent">
+                                <div class="prow">
+                                    <div class="pcol">Emergency Contact</div>
+                                    <div class="pcol">
+                                        <span>50%</span> Completed
+                                        <progress max="100" value="50"></progress>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-percent">
+                                <div class="prow">
+                                    <div class="pcol">Health Record</div>
+                                    <div class="pcol">
+                                        <span>50%</span> Completed
+                                        <progress max="100" value="50"></progress>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <ul class="nav nav-tabs" role="tablist">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#personal">Personal</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#emergencyContact">
-                                Emergency Contact</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#symptoms">
-                                Symptoms</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#medication">
-                              Medication</a>
-                          </li>
-                        </ul>
-                      
-                        <!-- Tab panes -->
-                        <div class="tab-content profile-tab-content">
-                          <div id="personal" class="container tab-pane active"><br>
-                            <h3>Personal</h3>
-                            <div class="row">
-                              <div class="col-lg-6 col-md-6 col-sm-6 col-12">                          
-                                  <div class="form-group">
-                                      <label for="firstName">First Name:</label>
-                                      <input type="text" class="form-control" id="firstName" Value="Robert" name="fname">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="memberIdNo">Member ID No:</label>
-                                      <input type="text" class="form-control" id="memberIdNo" value="34523546635345" name="memberid">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="gender">Gender:</label>
-                                      <input type="text" class="form-control" id="gender" value="Male" name="gender">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="weight">Weight:</label>
-                                      <input type="text" class="form-control" id="weight" value="120Lbs" name="weight">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="dfdfdf">Email:</label>
-                                      <input type="email" class="form-control" id="email" value="mike@info.com" name="email">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="address1">Address 1:</label>
-                                      <input type="text" class="form-control" id="address1" value="85 Bay Drive" name="address1">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="city">City:</label>
-                                      <input type="text" class="form-control" id="city" value="85 Bay Drive" name="city">
-                                  </div>
-                              </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">                       
-                                  <div class="form-group">
-                                      <label for="lastName">Last Name:</label>
-                                      <input type="text" class="form-control" id="lastName" value="Williams" name="lname">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="age">DOB / Age:</label>
-                                      <input type="text" class="form-control" id="age" value="34 years" name="age">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="height">Height:</label>
-                                      <input type="text" class="form-control" id="height" value="5.5''" name="height">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="skinType">Skin Type:</label>
-                                      <input type="text" class="form-control" id="skinType" value="Whte" name="skintype">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="mobile">Mobile:</label>
-                                      <input type="text" class="form-control" id="mobile" value="+1 (123) 456 7893" name="mobile">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="address2">Address 2:</label>
-                                      <input type="text" class="form-control" id="address2" value="New Port Richey" name="address2">
-                                  </div>                        
-                                  <div class="form-group">
-                                      <label for="state">State:</label>
-                                      <input type="text" class="form-control" id="state" value="state" name="state">
-                                  </div>
-                              </div>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-8 col-12">
+                        <div class="profile-details-container">
+                            <div class="profile-details-header">
+                                <h2>My Profile</h2>
+                                <div class="percent-completed">
+                                    <p><span>42%</span> Completed</p>
+                                    <progress max="100" value="42"></progress>
+                                </div>
                             </div>
-                            <div class="personal-btns">
-                                <button class="btn btn-secondary" type="button">
-                                    Cancel
-                                </button>
-                                <button class="btn btn-primary" type="button">
-                                    Update
-                                </button>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#personal">Personal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#emergencyContact">
+                                        Emergency Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#symptoms">
+                                        Allergies </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#medication">
+                                        Medication</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content profile-tab-content">
+                                <div id="personal" class="container tab-pane active"><br>
+                                    <h3>Personal</h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="firstName">First Name:</label>
+                                                <input type="text" class="form-control" id="firstName" Value="Robert"
+                                                    name="fname">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="memberIdNo">Member ID No:</label>
+                                                <input type="text" class="form-control" id="memberIdNo"
+                                                    value="34523546635345" name="memberid">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender">Gender:</label>
+                                                <input type="text" class="form-control" id="gender" value="Male"
+                                                    name="gender">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="weight">Weight:</label>
+                                                <input type="text" class="form-control" id="weight" value="120Lbs"
+                                                    name="weight">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dfdfdf">Email:</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    value="mike@info.com" name="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address1">Address 1:</label>
+                                                <input type="text" class="form-control" id="address1"
+                                                    value="85 Bay Drive" name="address1">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="city">City:</label>
+                                                <input type="text" class="form-control" id="city" value="85 Bay Drive"
+                                                    name="city">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label for="lastName">Last Name:</label>
+                                                <input type="text" class="form-control" id="lastName" value="Williams"
+                                                    name="lname">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="age">DOB / Age:</label>
+                                                <input type="text" class="form-control" id="age" value="34 years"
+                                                    name="age">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="height">Height:</label>
+                                                <input type="text" class="form-control" id="height" value="5.5''"
+                                                    name="height">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="skinType">Skin Type:</label>
+                                                <input type="text" class="form-control" id="skinType" value="Whte"
+                                                    name="skintype">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mobile">Mobile:</label>
+                                                <input type="text" class="form-control" id="mobile"
+                                                    value="+1 (123) 456 7893" name="mobile">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address2">Address 2:</label>
+                                                <input type="text" class="form-control" id="address2"
+                                                    value="New Port Richey" name="address2">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="state">State:</label>
+                                                <input type="text" class="form-control" id="state" value="state"
+                                                    name="state">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-btns">
+                                        <button class="btn btn-secondary" type="button">
+                                            Cancel
+                                        </button>
+                                        <button class="btn btn-primary" type="button">
+                                            Update
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="emergencyContact" class="container tab-pane fade"><br>
+                                    <h3>Emergency Contact</h3>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">FIrst Name:</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="Robert">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Last Name:</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="Williams">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Relationship to you:</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="New Port Richey">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Email:</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="mike@info.com">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Mobile:</label>
+                                                    <input type="number" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="+1 (123) 456 7893">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Address1:</label>
+                                                    <textarea class="form-control"
+                                                        placeholder="85 Bay Drive"></textarea>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">Address 2:</label>
+                                                    <textarea class="form-control"
+                                                        placeholder="New Port Richey"></textarea>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">City:</label>
+                                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="Wall City">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="exampleInputEmail1">State:</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp" placeholder="Wall State">
+
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="personal-btns">
+                                            <button class="btn btn-secondary" type="button">
+                                                Cancel
+                                            </button>
+                                            <button class="btn btn-primary" type="button">
+                                                Update
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div id="symptoms" class="container tab-pane fade"><br>
+                                    <h3 class="float-left">Allergies </h3>
+                                    <h3 class="float-right">
+                                        <button class="btn btn-primary" data-target="#allergies" data-toggle="modal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10"
+                                                fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
+                                            </svg> Add Allergies</button>
+                                    </h3>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Date Identified</th>
+                                                <th scope="col">Allergies</th>
+                                                <th scope="col">Reaction</th>
+                                                <th scope="col">Severity</th>
+                                                <th scope="col">Active</th>
+                                                <th scope="col">Edit</th>
+                                                <th scope="col">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>01/01/202</td>
+                                                <td>Lactose </td>
+                                                <td>Swelling</td>
+                                                <td>Moderate</td>
+                                                <td>Yes</td>
+                                                <td>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" data-target="#allergies" data-toggle="modal" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                    </svg>
+                                                </td>
+                                                <td>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                    </svg>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>05/01/202</td>
+                                                <td>Eggs </td>
+                                                <td>Itching </td>
+                                                <td>Moderate</td>
+                                                <td>Yes</td>
+                                                <td>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" data-target="#allergies" data-toggle="modal" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                    </svg>
+                                                </td>
+                                                <td>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                    </svg>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="medication" class="container tab-pane fade"><br>
+                                    <h3 class="float-left">Medication</h3>
+                                    <h3 class="float-right">
+                                        <button class="btn btn-primary" data-target="#nurseAdviceLine"
+                                            data-toggle="modal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10"
+                                                fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
+                                            </svg> Add Medication</button>
+                                    </h3>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Medication</th>
+                                                <th scope="col">Currently taking</th>
+                                                <th scope="col">Edit</th>
+                                                <th scope="col">Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Insulin</td>
+                                                <td>Yes</td>
+                                                <td>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" data-target="#nurseAdviceLine"
+                                                    data-toggle="modal" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                                    </svg>
+                                                </td>
+                                                <td>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                    </svg>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                          </div>
-                          <div id="emergencyContact" class="container tab-pane fade"><br>
-                            <h3>Emergency Contact</h3>
-                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                          </div>
-                          <div id="symptoms" class="container tab-pane fade"><br>
-                            <h3>Symptoms</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                          </div>
-                          <div id="medication" class="container tab-pane fade"><br>
-                            <h3>Medication</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                          </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-3 col-12">
-          <div id="mainRightSection"></div>        
+            <div class="col-lg-2 col-md-3 col-sm-3 col-12">
+                <div id="mainRightSection"></div>
+            </div>
         </div>
     </div>
-</div>
-<footer class="container-fluid main-footer" id="mainFooter">  
-</footer>
+    <footer class="container-fluid main-footer" id="mainFooter">
+    </footer>
 
+    <!-- Medication Popup -->
+    <div class="modal fade text-center nal-modal" id="nurseAdviceLine">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 class="mc-list-content">Add Medication</h2>
+                    <button type="button" class="close" data-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <div class="nal-content">
+                        <form>
+                            <div class="form-group">
+                                <label class="float-left">Mediation Nameor NDC Code</label>
+                                <input type="text" class="form-control" id="medicationName" placeholder="Insulin">
+                            </div>
+                            <div class="form-group">
+                                <label class="float-left">Frequency</label>
+                                <input type="text" class="form-control" id="medicationName" placeholder="4">
+                            </div>
+                            <div class="form-group">
+                                <label class="float-left">Quantity</label>
+                                <input type="text" class="form-control" id="medicationName" placeholder="10">
+                            </div>
+                            <div class="form-group">
+                                <label class="float-left">Is Currently Taking</label><br />
+                                <div class="form-group mt-3">
+                                    <label class="float-left radio-inline"><input type="radio" name="optradio"
+                                            checked>&nbsp;Yes&nbsp;</label>
+                                    <label class="float-left radio-inline"><input type="radio"
+                                            name="optradio">&nbsp;No</label>
+                                </div>
+                            </div>
+                            <div class="personal-btns mt-4">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button class="btn btn-primary" type="button" data-dismiss="modal">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Medication Popup End -->
+
+    <!-- Allergies Popup -->
+    <div class="modal fade text-center nal-modal" id="allergies">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 480px;">
+                <div class="modal-header">
+                    <h2 class="mc-list-content">Add Allergies</h2>
+                    <button type="button" class="close" data-dismiss="modal">X</button>
+                </div>
+                <div class="modal-body">
+                    <div class="nal-content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="float-left">Allergy</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option value="">Select</option>
+                                            <option selected>Aspirin</option>
+                                            <option>Glucose</option>
+                                            <option>Lactose</option>
+                                            <option>Codine</option>
+                                            <option>Peanut</option>
+                                            <option>Eggs</option>
+                                            <option>Other Nuts</option>                                            
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="float-left">Reaction</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option value="">Select</option>
+                                            <option selected>Rash</option>
+                                            <option>Itching</option>
+                                            <option>Swelling</option>
+                                            <option>Anaphalaxis</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="float-left">Severity</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option value="">Select</option>
+                                            <option selected>Low</option>
+                                            <option>Medium</option>
+                                            <option>High</option>
+                                          
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="float-left">Date Identified</label>
+                                        <input type="date" class="form-control" />
+                                        <small class="float-right">MM/DD/YYYY</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="float-left">Active</label><br />
+                                        <div class="form-group mt-3">
+                                            <label class="float-left radio-inline"><input type="radio" name="optradio"
+                                                    checked>&nbsp;Yes&nbsp;</label>
+                                            <label class="float-left radio-inline"><input type="radio"
+                                                    name="optradio">&nbsp;No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="float-left">Allergy Details</label>
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="personal-btns mt-4">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button class="btn btn-primary" type="button" data-dismiss="modal">
+                                    Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Alllergies Popup End -->
 </body>
+
 </html>

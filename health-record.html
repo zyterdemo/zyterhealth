@@ -39,17 +39,64 @@
                         Medications</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#clinicalSummary">
-                      Clinical Summary</a>
+                    <a class="nav-link" data-toggle="tab" href="#allergies">
+                      Allergies</a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#healthTracker">
                       Health Tracker</a>
-                  </li>
+                  </li> -->
                 </ul>
               
                 <!-- Tab panes -->
                 <div class="tab-content hr-tab-content">
+                  <div id="visitSummary" class="container tab-pane fade"><br>                    
+                    <div class="observ-radio-btns">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="duration_visits" id="last3days" value="customEx">
+                        <label for="last3days" class="custom-control-label" >Last 3 Days</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_visits" value="Today" id="today">
+                        <label class="custom-control-label" for="today">Today</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_visits" value="This Week" id="thisWeek" checked> 
+                        <label class="custom-control-label" for="thisWeek">This Week</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_visits" value="This Month" id="thisMonth">
+                        <label class="custom-control-label" for=
+                        "thisMonth">This Month</label>
+                      </div>
+                  </div>
+                  <div class="table-responsive hr-table">
+                    <table class="table table-striped">
+                        <thead>
+                          <th>Date Visited</th>
+                          <th>Healthcare Provider</th>
+                          <th>Rate you visit                             
+                          </th>
+                          <th>Leave Feedback                           
+                          </th>                         
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td>12/08/2017</td>
+                              <td>Mayo Clinic, Tampa FL</td>
+                              <td>****</td>
+                              <td></td>                              
+                          </tr>
+                          <tr>
+                            <td>24/08/2018</td>
+                            <td>Cantin Clinic, Tampa FL</td>
+                            <td>****</td>
+                            <td></td>                              
+                        </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                  </div>
                   <div id="observations" class="container tab-pane active"><br>
                     <div class="observ-radio-btns">
                         <div class="custom-control custom-radio custom-control-inline">
@@ -117,18 +164,99 @@
                           </table>
                       </div>
                   </div>
-                  <div id="emergencyContact" class="container tab-pane fade"><br>
-                    <h3>Emergency Contact</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <div id="medications" class="container tab-pane fade"><br>
+                    <div class="observ-radio-btns">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="duration_medications" id="last3days" value="customEx">
+                        <label for="last3days" class="custom-control-label" >Last 3 Days</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_medications" value="Today" id="today">
+                        <label class="custom-control-label" for="today">Today</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_medications" value="This Week" id="thisWeek" checked> 
+                        <label class="custom-control-label" for="thisWeek">This Week</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_medications" value="This Month" id="thisMonth">
+                        <label class="custom-control-label" for=
+                        "thisMonth">This Month</label>
+                      </div>
+                   </div>
+                   <table class="table table-striped">
+                    <thead>
+                        <tr>
+                           
+                            <th scope="col">Medication</th>
+                            <th scope="col">Currently taking</th>                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            
+                            <td>Insulin</td>
+                            <td>Yes</td>                            
+                        </tr>
+
+                    </tbody>
+                </table>
                   </div>
-                  <div id="symptoms" class="container tab-pane fade"><br>
-                    <h3>Symptoms</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                  </div>
-                  <div id="medication" class="container tab-pane fade"><br>
-                    <h3>Medication</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-                  </div>
+                  <div id="allergies" class="container tab-pane fade"><br>
+                    <div class="observ-radio-btns">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="duration_allergies" id="last3days" value="customEx">
+                        <label for="last3days" class="custom-control-label" >Last 3 Days</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_allergies" value="Today" id="today">
+                        <label class="custom-control-label" for="today">Today</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_allergies" value="This Week" id="thisWeek" checked> 
+                        <label class="custom-control-label" for="thisWeek">This Week</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input"  name="duration_allergies" value="This Month" id="thisMonth">
+                        <label class="custom-control-label" for=
+                        "thisMonth">This Month</label>
+                      </div>
+                   </div>
+                   <table class="table table-striped">
+                    <thead>
+                        <tr>
+                          
+                            <th scope="col">Date Identified</th>
+                            <th scope="col">Allergies</th>
+                            <th scope="col">Reaction</th>
+                            <th scope="col">Severity</th>
+                            <th scope="col">Active</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                           
+                            <td>01/01/202</td>
+                            <td>Lactose </td>
+                            <td>Swelling</td>
+                            <td>Moderate</td>
+                            <td>Yes</td>
+                            
+                        </tr>
+                        <tr>
+                           
+                            <td>05/01/202</td>
+                            <td>Eggs </td>
+                            <td>Itching </td>
+                            <td>Moderate</td>
+                            <td>Yes</td>
+                           
+                        </tr>
+
+                    </tbody>
+                </table>
+                  </div>                  
                 </div>
             </div>
         </div>
