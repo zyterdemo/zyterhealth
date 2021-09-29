@@ -41,6 +41,12 @@ p:after {
     display: inline-block !important;
     width: 100% !important;
   }
+
+  .paragraphReset :after {
+    content: "";
+    display: inherit !important;
+    width: 0% !important;
+  }
   .rowHeight{
       height: 45px !important;
   }
@@ -88,7 +94,7 @@ p:after {
   background: #f3f3f3;
 } */
 
-.card{
+/* .card{
   width: 100%;
   border: none !important;
   background: white;
@@ -96,7 +102,7 @@ p:after {
 
   position : relative;
   color: #434343;
-}
+} */
 
 .card .card__container{
   /* padding : 2rem; */  
@@ -121,7 +127,7 @@ p:after {
   top:2rem;
   left:-0.5rem;
   content: '';
-  background: #6d9cc4d6;
+  /* background: #6d9cc4d6; */
   height: 28px;
   width: 28px;
   transform : rotate(45deg);
@@ -136,11 +142,11 @@ p:after {
   left: -14px;
   padding: 0.5rem;
   width: 27em;
-  background: #E7F3FD;
+  /* background: #E7F3FD; */
   color: #495057;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+  /* box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2); */
 }
 .noRibbon::after{
   background: white !important;
