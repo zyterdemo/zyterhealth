@@ -3,13 +3,16 @@
 }
 .subTitle{
     background: rgb(235, 210, 210);
-    width: 190px;
+    /* width: 190px; */
     align-items: center;
-    margin-left: 45px;
+    /* margin-left: 45px; */
     border-radius: 3px;
     font-size: 12px;
     margin-top: -8px;
     font-weight: 600 !important;
+}
+.reduceWidth{
+  width: 170px !important;
 }
 .subTitleSelected{
   width: 240px !important;
