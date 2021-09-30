@@ -1,0 +1,99 @@
+html {
+    scroll-behavior: smooth;
+  }
+.cardBG{
+    background: url('../images/1.jpg');
+    height: 220px;
+    width: 190px !important;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+.cardBG1{
+    background: url('../images/1.jpg');
+}
+.cardBG2{
+    background: url('../images/2.jpg');
+}
+.cardBG3{
+    background: url('../images/3.jpg');
+}
+.cardBG4{
+    background: url('../images/4.jpg');
+}
+.cardBG5{
+    background: url('../images/5.jpg');
+}
+.cardBG6{
+    background: url('../images/6.jpg');
+}
+.explorerImage{
+    background: url('../images/explorer4.jpg');   
+    background-repeat: no-repeat;   
+    height:200px;
+    width: 100%;
+    object-fit: fill;
+}
+.cardOver{
+    margin-top: -80px;
+    margin-left:12px;
+    border: none !important;
+}
+.cardText{
+    font-size: 21px !important;
+    margin-top: -20px;
+}
+.home-card-content-height{
+    min-height: 210px !important;
+    width: 170px;
+    margin-left: 2px;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1);
+}
+.carousel-indicators li {
+background-color: #495057;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 0px !important;
+     padding-left: 0px !important;
+}
+.searchWidth{
+    width: 600px;
+    background-color: white;
+    height: 50px;    
+    box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+}
+.searchHeading{
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.btnRadius{
+    border-radius: 25px;
+    background-color: white !important;
+    color: #495057 !important;
+}
+.marginTop{
+    margin-top: 16px !important;
+}
+.removeBorder{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.mapMargin{
+    margin-top: 10px;
+}
+.margin1{
+    margin-top: 40px;
+}
+.preAlign{
+    white-space: pre-line;
+}
+.btnErroll{
+    background-color: #FED831 !important;
+    font-weight: 700;
+    width: 200px;
+    margin-bottom: 20px;
+}

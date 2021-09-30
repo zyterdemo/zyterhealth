@@ -13,6 +13,22 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/common-sections.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        $("#hideData").hide();
+        $("#hide").click(function () {
+            $("body").css("height", "1250px");  
+            $("#dataHide").hide();
+            $("#hideData").show();
+        });
+        $("#show").click(function () {                
+            $("#dataHide").show();
+            $("#hideData").hide();
+            $("body").css("height", "100%");  
+        });
+    });
+</script>
 </head>
 <body>
 
@@ -24,13 +40,67 @@
             <div class="fp-header">
                 <h2>Find a Pharmacy</h2>
             </div>
-            <div class="doctor-search">
-                <div class="form-group">
-                    <input type="search" class="form-control" placeholder="General Physician, New York"/>
-                    <span class="fas fa-search" ></span>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="doctor-search">
+                        <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Name" />
+                            <span class="fas fa-search"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <ul class="fp-list">
+                <div class="col-md-6">
+                    <div class="doctor-search">
+                        <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Zip" />
+                            <span class="fas fa-search"></span>
+                        </div>
+                    </div>
+                </div>
+                
+               
+
+                <div class="col-md-6">
+                    <div class="doctor-search">
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="">Miles</option>
+                                <option value="10" selected>10 Miles</option>
+                                <option value="15">15 Miles</option>
+                                <option value="20">20 Miles</option>
+                                <option value="25">25 Miles</option>
+                                <option value="30">30 Miles</option>
+                                <option value="35">35 Miles</option>
+                                <option value="40">40 Miles</option>
+                                <option value="45">45 Miles</option>
+                                <option value="50">50 Miles</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="doctor-search">
+                        <div class="form-group">
+                            <a  class="btn btn-primary"
+                                role="button" id="hide">Search</a>
+                            <a  class="btn btn-secondary"
+                                role="button" id="show">Clear</a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <table width="100%" align="center">
+                        <tr>
+                            <td align="center">
+                                <p class="mt-5" id="dataHide">Input details and Click on search to begin</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>         
+            <ul class="fp-list" id="hideData">
                 <li class="fp-list-item">
                     <div class="fp-list-content">
                         <h2>Oakwood Pharmacy</h2>
