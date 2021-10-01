@@ -70,6 +70,15 @@ for(var i = 0;i<usStates.length;i++){
     select.appendChild(option);    
     phoneNo++;
 }
+for(var i = 0;i<usStates.length;i++){
+    usStates[i].phone= phonestr+phoneNo;
+ var option = document.createElement("option");
+ option.text = usStates[i].name+' ['+usStates[i].abbreviation+']';
+ option.value = usStates[i].phone;
+ var select = document.getElementById("nurseSelectUS_");
+ select.appendChild(option);    
+ phoneNo++;
+}
 function selectStateUS(statePhoneNo){
     document.getElementById("statePhoneNo").textContent = "Call "+statePhoneNo;
     //console.log("this state number "+state);
