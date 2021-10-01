@@ -83,3 +83,7 @@ function selectStateUS(statePhoneNo){
     document.getElementById("statePhoneNo").textContent = "Call "+statePhoneNo;
     //console.log("this state number "+state);
 }
+function selectStateUSContact(statePhoneNo){
+    document.getElementById("statePhoneNo_").textContent = "Call "+statePhoneNo;
+    //console.log("this state number "+state);
+}

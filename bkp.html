@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Zyter Health - Plan Selection</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/find-doctor.css">
+  <link rel="stylesheet" href="css/treatment-cost-estimator.css">
+  <link rel="stylesheet" href="css/plan-selection.css">
+  <link rel="stylesheet" href="css/search-results.css">
+  <script src="js/all.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="js/treatment-cost-estimator.js"></script>
+  <script src="js/common-sections.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#hideData").hide();
+      $("#hide").click(function () {
+        $("body").css("height", "1700px");
+        $("#dataHide").hide();
+        $("#hideData").show();
+      });
+      $("#show").click(function () {
+        $("#dataHide").show();
+        $("#hideData").hide();
+        $("body").css("height", "100%");
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <header id="mainHeader"> </header>
+
+
+  <div class="container-fluid tce-screen">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+        <h2>Plan Selection </h2>
+        <!-- <p>Treatment Cost Advisor helps you estimate your costs for hundreds of common conditions, procedures, tests, and health care visits.</p> -->
+        <div class="stepwizard">
+          <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step col-xs-3">
+              <a href="#personalDetails" type="button" class="btn btn-success btn-circle" id="one">1</a>
+              <p><small>Personal details</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#healthCareNeeds" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                id="two">2</a>
+              <p><small>Health care needs</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                id="three">3</a>
+              <p><small>Tell us about your health care</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewEstimatedup1" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                id="four">4</a>
+              <p><small>Placeholder</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewEstimatedup2" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                id="five">5</a>
+              <p><small>Placeholder</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3">
+              <a href="#viewPlans" type="button" class="btn btn-default btn-circle" disabled="disabled" id="six">6</a>
+              <p><small>View plans</small></p>
+            </div>
+          </div>
+        </div>
+        <form role="form">
+          <div class="col-md-10">
+            <div class="card setup-content" id="personalDetails">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-10">
+
+                    <div class="row">
+                      <div class="col-md-5">
+                        <p>
+                          Amswer the questions to find out if you qualify for help to lower your health care costs.
+                        </p>
+                        <h3>Coverage Year</h3>
+                        <select class="form-control">
+                          <option value="1990">1990</option>
+                          <option value="1991">1991</option>
+                          <option value="1992">1992</option>
+                          <option value="1993">1993</option>
+                          <option value="1994">1994</option>
+                          <option value="1995">1995</option>
+                          <option value="1996">1996</option>
+                          <option value="1997">1997</option>
+                          <option value="1998">1998</option>
+                          <option value="1999">1999</option>
+                          <option value="2000">2000</option>
+                          <option value="2001">2001</option>
+                          <option value="2002">2002</option>
+                          <option value="2003">2003</option>
+                          <option value="2004">2004</option>
+                          <option value="2005">2005</option>
+                          <option value="2006">2006</option>
+                          <option value="2007">2007</option>
+                          <option value="2008">2008</option>
+                          <option value="2009">2009</option>
+                          <option value="2010">2010</option>
+                          <option value="2011">2011</option>
+                          <option value="2012">2012</option>
+                          <option value="2013">2013</option>
+                          <option value="2014">2014</option>
+                          <option value="2015">2015</option>
+                          <option value="2016">2016</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021" selected="selected">2021</option>
+
+                        </select>
+                        <h3 class="mt-4">What is your Zip code? </h3>
+                        <input type="text" class="form-control" placeholder="Ex:90201" />
+                        <h3 class="mt-4">What is your household income per year? <i class="fas fa-info-circle"
+                            aria-hidden="false" style="color: #4193CE"></i></h3>
+                        <input type="text" class="form-control" placeholder="" />
+                        <h3 class="mt-4">How many people are in your household? <i class="fas fa-info-circle"
+                            aria-hidden="false" style="color: #4193CE"></i></h3>
+                        <select class="form-control">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3" selected>3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                        </select>
+
+                      </div>
+                      <div class="col-md-7">
+
+                        <p>
+                          Enter the age of each person in your household, and tell us if they need coverage.
+                        </p>
+
+                        <div class="row">
+                          <div class="col-md-12">
+                            <h3>Age of head of household:</h3>
+                            <input type="text" class="form-control" placeholder="" />
+                          </div>
+                          <div class="col-md-12 mt-2">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="" checked>Needs Coverage?
+                              </label>
+                            </div>
+                            <div class="form-check mt-2">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">Pregnant? <i
+                                  class="fas fa-info-circle" aria-hidden="false" style="color: #4193CE"></i>
+                              </label>
+                            </div>
+                            <div class="form-check mt-2">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">Bling or Disabled? <i
+                                  class="fas fa-info-circle" aria-hidden="false" style="color: #4193CE"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col-md-12">
+                            <h3>Age of person 2:</h3>
+                            <input type="text" class="form-control" placeholder="" />
+                          </div>
+                          <div class="col-md-12 mt-2">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="" checked>Needs Coverage?
+                              </label>
+                            </div>
+                            <div class="form-check mt-2">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">Pregnant? <i
+                                  class="fas fa-info-circle" aria-hidden="false" style="color: #4193CE"></i>
+                              </label>
+                            </div>
+                            <div class="form-check mt-2">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">Bling or Disabled? <i
+                                  class="fas fa-info-circle" aria-hidden="false" style="color: #4193CE"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row mt-4">
+                          <div class="col-md-12">
+                            <h3>Age of person 3:</h3>
+                            <input type="text" class="form-control" placeholder="" />
+                          </div>
+                          <div class="col-md-12 mt-2">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="" checked>Needs Coverage?
+                              </label>
+                            </div>
+                            <div class="form-check mt-2">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">Pregnant? <i
+                                  class="fas fa-info-circle" aria-hidden="false" style="color: #4193CE"></i>
+                              </label>
+                            </div>
+                            <div class="form-check mt-2">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" value="">Bling or Disabled? <i
+                                  class="fas fa-info-circle" aria-hidden="false" style="color: #4193CE"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <a class="float-right btn btn-primary" href="#healthCareNeeds"
+                    onClick="goNext_plans('healthCareNeeds','one','two')">
+                    Next
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="setup-content" id="healthCareNeeds">
+            <div class="container-fluid main-content-body homepage-body">
+              <div class="row">
+                <div class="col-lg-10 col-md-9 col-sm-9 col-12">
+                  <div class="fd-area">
+                    <div class="fd-header">
+                      <h2>Find a Healthcare Provider</h2>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="First Name" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Last Name" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Specialty" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <input type="search" class="form-control" placeholder="Zip" />
+                            <span class="fas fa-search"></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <select class="form-control">
+                              <option value="">Miles</option>
+                              <option value="10" selected>10 Miles</option>
+                              <option value="15">15 Miles</option>
+                              <option value="20">20 Miles</option>
+                              <option value="25">25 Miles</option>
+                              <option value="30">30 Miles</option>
+                              <option value="35">35 Miles</option>
+                              <option value="40">40 Miles</option>
+                              <option value="45">45 Miles</option>
+                              <option value="50">50 Miles</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="doctor-search">
+                          <div class="form-group">
+                            <a class="btn btn-primary" role="button" id="hide">Search</a>
+                            <a class="btn btn-secondary" role="button" id="show">Clear</a>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="row mt-5">
+                      <div class="col-md-12">
+                        <table width="100%" align="center">
+                          <tr>
+                            <td align="center">
+                              <p class="mt-5" id="dataHide">Input details and Click on search to begin</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- Search results -->
+                    <div class="container-fluid tce-screen mb-4 mt-5" id="hideData">
+                      <div class="row rowColor">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                          <p class="mt-4 inNetworkBG">&nbsp;&nbsp;<b>In Network</b></p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                          &nbsp;
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                          <table width="90%" align="right">
+                            <tr>
+                              <td>
+                                <p class="mt-4 fontColorWhite"> <i
+                                    class="fas fa-sort-amount-up fontColorWhite mr-2"></i> <b>Filter &
+                                    Sort </b>
+                                </p>
+                              </td>
+                              <td>
+                                <p class="mt-4 fontColorWhite"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-folder-fill mr-2" viewBox="0 0 16 16">
+                                    <path
+                                      d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3zm-8.322.12C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139z" />
+                                  </svg> <b>Print a Provider Directory</b></p>
+                              </td>
+                              <td>
+                                <p class="mt-4 fontColorWhite"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-printer-fill mr-2" viewBox="0 0 16 16">
+                                    <path
+                                      d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z" />
+                                    <path
+                                      d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                                  </svg> <b>Print</b></p>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row rowColorSub">
+                        <div class="col-md-12 col-sm-12 col-xs-12 colHeight">
+                          <!-- <p class="fontColorWhite mt-1">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p> -->
+                          <p class="text-justify fontColorBlack mt-1"><b># A B C D E F * H I J K * M N * P Q R S T
+                              U * W * Y *</b></p>
+                          <!-- <p class="text-justify fontColorBlack mt-1"><span class="underLine">#</span> <span class="underLine">A</span> <span class="underLine">B</span> <span class="underLine">C</span> <span class="underLine">D</span> <span class="underLine">E</span> <span class="underLine">F</span> <span class="underLine">G</span> <span class="underLine">H</span> <span class="underLine">I</span> <span class="underLine">J</span> <span class="underLine">K</span> <span class="underLine">L</span> <span class="underLine">M</span> <span class="underLine">N</span> <span class="underLine">O</span> <span class="underLine">P</span> <span class="underLine">Q</span> <span class="underLine">R</span> <span class="underLine">S</span> <span class="underLine">T</span> <span class="underLine">U</span> <span class="underLine">V</span> <span class="underLine">W</span> <span class="underLine">X</span> <span class="underLine">Y</span> <span class="underLine">Z</span></p> -->
+                        </div>
+                      </div>
+
+                      <div class="row  rowColorSubWhite mt-5 rowHeight">
+
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                          <p class="mt-3"><b class="fontColorBlack">Provider/Facility Information</b></p>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1">
+                          <p class="mt-3"><b class="fontColorBlack">Distance</b></p>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2">
+                          <p class="mt-3"><b class="fontColorBlack">Addresses</b></p>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                          <p class="mt-3"><b class="fontColorBlack">Plan Information</b></p>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-3">
+                          <p class="mt-3"><b class="fontColorBlack">Specialities</b></p>
+                        </div>
+                        <div class="col-md-1 col-sm-3 col-xs-3">
+                          <p class="mt-3"><b class="fontColorBlack">Ratings</b></p>
+                        </div>
+
+                      </div>
+                      <div class="fd-box auto_width ml-0 setMargins" style="width: auto;height: 226px;">
+                        <div class="row">
+                          <div class="col-md-3" style="margin-top: -50px;">
+                            <!-- <div class="card" data-label="Maximum Savings">
+                          <div class="card__container"> -->
+                            <p class="card__body">
+                            <div class="col-md-3">
+                              <div class="setWidth">
+                                <div class="fd-image mt-5">
+                                  <img src="./images/doctor1.png" height="90" />
+                                </div>
+                                <div class="fd-text">
+                                  <p>Dr. Ricky Watson</p>
+                                </div>
+                              </div>
+                              <div style="margin-top: -50px;">
+                                <p class="purpelText setWidth mb-0 mt-5 ml-5">
+                                  <b>Carbon Health Medical Group</b>
+                                </p>
+                                <!-- <p class="mb-0 marginTopReset setWidth ml-5">
+                                                <b>Specialities</b>: Urgent Care Center
+                                            </p> -->
+                                <!-- <div class="form-check marginTopReset setWidthCompare bgPurpuleCompare">
+                                  <label class="form-check-label mt-2 ml-3">
+                                    <input type="checkbox" class="form-check-input marginClass" value="">
+                                    <span class="fontColorBlack">
+                                      <b class="mt-1">&nbsp;Add to Compare</b>
+                                    </span>
+                                  </label>
+                                </div> -->
+                                <p class="setWidth marginTopReset mb-0 ml-5"><b class="purpelText">Report
+                                    Incorrect Information >></b></p>
+                              </div>
+                            </div>
+                            </p>
+                            <!-- </div>
+                        </div> -->
+                          </div>
+                          <div class="col-md-1">
+                            <p class="mt-2 milesFont">0.74 Miles</p>
+                          </div>
+                          <div class="col-md-2">
+                            <p class="mb-0 marginTopReset setWidth mt-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                class="bi bi-check-circle-fill iconbgGreen" viewBox="0 0 16 16">
+                                <path
+                                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                              </svg>
+                              In Network
+                            </p>
+                            <p class="mb-0 marginTopReset setWidth"><i class="fa fa-map-marker purpelText"
+                                aria-hidden="true"></i>
+                              255 Liberty Street Suite 277
+                              <br />&nbsp;&nbsp;&nbsp;&nbsp;New York, NY 10281
+                            </p>
+                            <p class="mb-0 marginTopReset setWidth"><i class="fa fa-phone purpelText"
+                                aria-hidden="true"></i>
+                              (415)200-2133
+                            </p>
+                          </div>
+                          <div class="col-md-3">
+                            <p class="purpelText mb-0"><b>Savings Plus</b></p>
+                            <p class="bgPurpule mb-0">
+                              Maximum Savings - The provider <br />
+                              provides maximum savings for you
+                            </p>
+                            <p class="purpelText">See Accepted Plans</p>
+                          </div>
+                          <div class="col-md-2">
+                            <p class="mt-2 milesFont">Urgent Care Center</p>
+                          </div>
+                          <div class="col-md-1">
+                            <p class="mt-2 milesFont">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="fd-box auto_width ml-0 setMargins" style="width: auto;height: 226px;">
+                        <div class="row">
+                          <div class="col-md-3" style="margin-top: -50px;">
+                            <!-- <div class="card" data-label="Maximum Savings">
+                          <div class="card__container"> -->
+                            <p class="card__body">
+                            <div class="col-md-3">
+                              <div class="setWidth">
+                                <div class="fd-image mt-5">
+                                  <img src="./images/fdoctor2.png" height="90" />
+                                </div>
+                                <div class="fd-text">
+                                  <p>Dr. Mercy</p>
+                                </div>
+                              </div>
+                              <div style="margin-top: -50px;">
+                                <p class="purpelText setWidth mb-0 mt-5 ml-5">
+                                  <b>Carbon Health Medical Group</b>
+                                </p>
+                                <!-- <p class="mb-0 marginTopReset setWidth ml-5">
+                                                <b>Specialities</b>: Covid Care Center
+                                            </p> -->
+                                <!-- <div class="form-check marginTopReset setWidthCompare bgPurpuleCompare">
+                                  <label class="form-check-label mt-2 ml-3">
+                                    <input type="checkbox" class="form-check-input marginClass" value="">
+                                    <span class="fontColorBlack">
+                                      <b class="mt-1">&nbsp;Add to Compare</b>
+                                    </span>
+                                  </label>
+                                </div> -->
+                                <p class="setWidth marginTopReset mb-0 ml-5"><b class="purpelText">Report
+                                    Incorrect Information >></b></p>
+                              </div>
+                            </div>
+                            </p>
+                            <!-- </div>
+                        </div> -->
+                          </div>
+                          <div class="col-md-1">
+                            <p class="mt-2 milesFont">0.74 Miles</p>
+                          </div>
+                          <div class="col-md-2">
+                            <p class="mb-0 marginTopReset setWidth mt-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                class="bi bi-check-circle-fill iconbgGreen" viewBox="0 0 16 16">
+                                <path
+                                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                              </svg>
+                              In Network
+                            </p>
+                            <p class="mb-0 marginTopReset setWidth"><i class="fa fa-map-marker purpelText"
+                                aria-hidden="true"></i>
+                              255 Liberty Street Suite 277
+                              <br />&nbsp;&nbsp;&nbsp;&nbsp;New York, NY 10281
+                            </p>
+                            <p class="mb-0 marginTopReset setWidth"><i class="fa fa-phone purpelText"
+                                aria-hidden="true"></i>
+                              (415)200-2133
+                            </p>
+                          </div>
+                          <div class="col-md-3">
+                            <p class="purpelText mb-0"><b>Savings Plus</b></p>
+                            <p class="bgPurpule mb-0">
+                              Maximum Savings - The provider <br />
+                              provides maximum savings for you
+                            </p>
+                            <p class="purpelText">See Accepted Plans</p>
+                          </div>
+                          <div class="col-md-2">
+                            <p class="mt-2 milesFont">Urgent Care Center</p>
+                          </div>
+                          <div class="col-md-1">
+                            <p class="mt-2 milesFont">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="fd-box auto_width ml-0 setMargins" style="width: auto;height: 226px;">
+                        <div class="row">
+                          <div class="col-md-3" style="margin-top: -50px;">
+                            <!-- <div class="card" data-label="Maximum Savings">
+                          <div class="card__container"> -->
+                            <p class="card__body">
+                            <div class="col-md-3">
+                              <div class="setWidth">
+                                <div class="fd-image mt-5">
+                                  <img src="./images/doctor2.png" height="90" />
+                                </div>
+                                <div class="fd-text">
+                                  <p>Dr. Micky</p>
+                                </div>
+                              </div>
+                              <div style="margin-top: -50px;">
+                                <p class="purpelText setWidth mb-0 mt-5 ml-5">
+                                  <b>Carbon Health Medical Group</b>
+                                </p>
+                                <!-- <p class="mb-0 marginTopReset setWidth ml-5">
+                                                <b>Specialities</b>: Emergency Care Center
+                                            </p> -->
+                                <!-- <div class="form-check marginTopReset setWidthCompare bgPurpuleCompare">
+                                  <label class="form-check-label mt-2 ml-3">
+                                    <input type="checkbox" class="form-check-input marginClass" value="">
+                                    <span class="fontColorBlack">
+                                      <b class="mt-1">&nbsp;Add to Compare</b>
+                                    </span>
+                                  </label>
+                                </div> -->
+                                <p class="setWidth marginTopReset mb-0 ml-5"><b class="purpelText">Report
+                                    Incorrect Information >></b></p>
+                              </div>
+                            </div>
+                            </p>
+                            <!-- </div>
+                        </div> -->
+                          </div>
+                          <div class="col-md-1">
+                            <p class="mt-2 milesFont">0.74 Miles</p>
+                          </div>
+                          <div class="col-md-2">
+                            <p class="mb-0 marginTopReset setWidth mt-2">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                                class="bi bi-check-circle-fill iconbgGreen" viewBox="0 0 16 16">
+                                <path
+                                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                              </svg>
+                              In Network
+                            </p>
+                            <p class="mb-0 marginTopReset setWidth"><i class="fa fa-map-marker purpelText"
+                                aria-hidden="true"></i>
+                              255 Liberty Street Suite 277
+                              <br />&nbsp;&nbsp;&nbsp;&nbsp;New York, NY 10281
+                            </p>
+                            <p class="mb-0 marginTopReset setWidth"><i class="fa fa-phone purpelText"
+                                aria-hidden="true"></i>
+                              (415)200-2133
+                            </p>
+                          </div>
+                          <div class="col-md-3">
+                            <p class="purpelText mb-0"><b>Savings Plus</b></p>
+                            <p class="bgPurpule mb-0">
+                              Maximum Savings - The provider <br />
+                              provides maximum savings for you
+                            </p>
+                            <p class="purpelText">See Accepted Plans</p>
+                          </div>
+                          <div class="col-md-2">
+                            <p class="mt-2 milesFont">Urgent Care Center</p>
+                          </div>
+                          <div class="col-md-1">
+                            <p class="mt-2 milesFont">
+                              <span class="fa fa-star checked"></span>
+                              <span class="fa fa-star checked"></span>
+
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- Search Results -->
+                  </div>
+                </div>
+                <!-- <div class="col-lg-2 col-md-3 col-sm-3 col-12">
+                    <div id="mainRightSection"></div>
+                  </div> -->
+              </div>
+              <div class="row mt-5 mb-5">
+                <div class="col-md-12">
+                  <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                    onClick="goNext_plans('viewEstimate','two','three')">
+                    Next
+                  </a>
+                  <a class="btn btn-secondary float-right mr-2" href="#healthCareNeeds"
+                    onClick="goNext_plans('personalDetails','two','one')">
+                    Previous
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card setup-content" id="viewEstimate">
+            <div class="card-body">
+              <h3>Tell us about your health care needs</h3>
+              <div class="col-md-7 p-4" style="background: #8080803b;">
+                Your answers are used to find the best plan option for you
+              </div>
+              <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+              <p class="mt-4">Choose the category that base describe the medical service use you except for the next
+                year. <br />For families, choose the category the best fits the person who probably will need the most
+                medical services next year.</p>
+
+              <div class="covid-checks-area covid-checks-inline">
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">LOW USE: 1 doctor visit and tests:
+                    preventive visits too.
+                  </label>
+                </div><br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">MEDIUM USE: 4-5 doctor visits, tests
+                    and treatment in doctor office.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">HIGH USE: surgery or treatment
+                    outpatient; 6 or more visits and treats.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">VERY HIGH USE: a hospital stay,
+                    outpatient treatment; 6 or more visits and treats.
+                  </label>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                    onClick="goNext_plans('viewEstimatedup1','three','four')">
+                    View Plans
+                  </a>
+
+                  <a class="btn btn-secondary mr-2 float-right" href="#healthCareNeeds"
+                    onClick="goNext_plans('healthCareNeeds','three','two')">
+                    Previous
+                  </a>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card setup-content" id="viewEstimatedup1">
+            <div class="card-body">
+              <h3>Tell us about your health care needs</h3>
+              <div class="col-md-7 p-4" style="background: #8080803b;">
+                Your answers are used to find the best plan option for you
+              </div>
+              <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+              <p class="mt-4">Choose the category that base describe the medical service use you except for the next
+                year. <br />For families, choose the category the best fits the person who probably will need the most
+                medical services next year.</p>
+
+              <div class="covid-checks-area covid-checks-inline">
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">LOW USE: 1 doctor visit and tests:
+                    preventive visits too.
+                  </label>
+                </div><br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">MEDIUM USE: 4-5 doctor visits, tests
+                    and treatment in doctor office.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">HIGH USE: surgery or treatment
+                    outpatient; 6 or more visits and treats.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">VERY HIGH USE: a hospital stay,
+                    outpatient treatment; 6 or more visits and treats.
+                  </label>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                    onClick="goNext_plans('viewEstimatedup2','four','five')">
+                    View Plans
+                  </a>
+                  <a class="btn btn-secondary float-right mr-2" href="#healthCareNeeds"
+                    onClick="goNext_plans('viewEstimate','four','three')">
+                    Previous
+                  </a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card setup-content" id="viewEstimatedup2">
+            <div class="card-body">
+              <h3>Tell us about your health care needs</h3>
+              <div class="col-md-7 p-4" style="background: #8080803b;">
+                Your answers are used to find the best plan option for you
+              </div>
+              <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+              <p class="mt-4">Choose the category that base describe the medical service use you except for the next
+                year. <br />For families, choose the category the best fits the person who probably will need the most
+                medical services next year.</p>
+
+              <div class="covid-checks-area covid-checks-inline">
+                <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">LOW USE: 1 doctor visit and tests:
+                    preventive visits too.
+                  </label>
+                </div><br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">MEDIUM USE: 4-5 doctor visits, tests
+                    and treatment in doctor office.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">HIGH USE: surgery or treatment
+                    outpatient; 6 or more visits and treats.
+                  </label>
+                </div>
+                <br />
+                <div class="form-check-inline mt-2">
+                  <label class="form-check-label">
+                    <input type="radio" name="r1" class="form-check-input" value="">VERY HIGH USE: a hospital stay,
+                    outpatient treatment; 6 or more visits and treats.
+                  </label>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+
+
+                  <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                    onClick="goNext_plans('viewPlans','five','six')">
+                    View Plans
+                  </a>
+                  <a class="btn btn-secondary mr-2 float-right" href="#healthCareNeeds"
+                    onClick="goNext_plans('viewEstimatedup1','five','four')">
+                    Previous
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card setup-content" id="viewPlans">
+            <div class="card-body">
+              <!-- Compare Plans -->
+
+              <!-- Compare Plan END -->
+              <!-- <h3>Plans</h3> -->
+              <div class="row paragraphReset">
+                <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2 heightOverflowy">
+                  <div class="fd-box addWidth">
+                    <div class="fd-text">
+                      <!--<small>Name</small>-->
+                      <table width="100%">
+                        <tr>
+                          <td align="left">
+                            <p class="filterFont mb-0 ml-3"><b>Compare Plans 2 of 3</b></p>
+                          </td>
+                          <td align="right">
+                            <div id="accordion">
+                              <a class="card-link colorBlue" data-toggle="collapse" href="#collapseOne">
+                                <p class="filterFont mb-0 mr-5"><b><i class="fa fa-minus" aria-hidden="true"
+                                      style="color: #4193CE;"></i></b>
+                                </p>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <table style="margin-left: 10px;">
+                          <tr>
+                            <td align="left" colspan="2">
+                              <p class="filterFont mb-0">
+                                <button type="button" class="close closeBtnStyles" aria-label="Close">
+                                  <span aria-hidden="true" class="closeBtn">&times;</span>
+                                </button>
+                              <div class="fd-box auto_width ml-0 compareborderColor" style="width: auto;">
+                                <div class="fd-text">
+                                  <!--<small>Name</small>-->
+                                  <img src="./images/logo.png" class="imgWidth mb-4"
+                                    style="background-color: #002C77;" />
+                                  <p class="subTitle mb-4 marginLeftReset reduceWidth">HMO</p>
+                                  <p class="dollors-sm-font mb-1"><b>$226.00</b></p>
+                                </div>
+                              </div>
+                              </p>
+
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" colspan="2">
+                              <p class="filterFont mb-0">
+                                <button type="button" class="close closeBtnStyles" aria-label="Close">
+                                  <span aria-hidden="true" class="closeBtn">&times;</span>
+                                </button>
+
+                              <div class="fd-box auto_width ml-0 compareborderColor" style="width: auto;">
+                                <div class="fd-text">
+                                  <!--<small>Name</small>-->
+                                  <img src="./images/logo.png" class="imgWidth mb-4"
+                                    style="background-color: #002C77;" />
+                                  <p class="subTitle mb-4 marginLeftReset">HMO</p>
+                                  <p class="dollors-sm-font mb-1"><b>$226.00</b></p>
+                                </div>
+                              </div>
+                              </p>
+
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" colspan="2">
+                              <p class="filterFont mb-0">
+                              <div class="fd-box auto_width ml-0 compareborderDashedColor" style="width: auto;">
+                                <div class="fd-text">
+                                  <!--<small>Name</small>-->
+                                  <p class="mb-0">&nbsp;</p>
+                                  <p>Add a plan</p>
+                                  <p class="mb-0">&nbsp;</p>
+                                </div>
+                              </div>
+                              </p>
+
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" colspan="2">
+                              <p class="filterFont mb-0">
+                              <div class="fd-text">
+                                <!--<small>Name</small>-->
+
+                                <p>
+                                  <a href="compare-plans.html" class="btn btn-primary btn-block" role="button">Compare
+                                    Now</a>
+                                </p>
+
+                              </div>
+
+                              </p>
+
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fd-box addWidth">
+                    <div class="fd-text">
+                      <!--<small>Name</small>-->
+                      <table style="margin-left: 10px;">
+                        <tr>
+                          <td align="left">
+                            <p class="filterFont mb-0"><b>FILTER BY</b></p>
+                          </td>
+                        </tr>
+                      </table>
+
+                      <hr />
+                      <table style="margin-left: 10px;">
+                        <tr>
+                          <td align="left">
+                            <p class="planType mb-3"><b>PLAN TYPE</b></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left">
+
+                            <div class="form-check mb-3">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input marginClass" value="">
+                                <span class="colorBlue">HMO</span>
+                              </label>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left">
+
+                            <div class="form-check mb-3">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input marginClass" value="">
+                                <span class="colorBlue">EPO</span>
+                              </label>
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left">
+
+                            <div class="form-check mb-3">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input marginClass" value="">
+                                <span class="colorBlue">PPO</span>
+                              </label>
+                            </div>
+
+                          </td>
+                        </tr>
+                      </table>
+                      <table style="margin-left: 10px;">
+                        <tr>
+                          <td align="left">
+                            <p class="planType mb-3"><b>PLAN FEATURES</b></p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left">
+                            <p class="mb-1">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input marginClass" value="">
+                                <span class="colorBlue">Health Savings Account(HSA)</span>
+                                <small>Qualified HSA used with a High Deductible Health Plan</small>
+                              </label>
+                            </div>
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                      <span class="mb-1">
+                        <table style="margin-left: 11px;" class="mb-4">
+                          <tr>
+                            <td align="left">
+                              <p class="mb-0">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <span class="colorBlue" style="margin-left:-15px"><b>METAl TIER</b></span><br />
+
+                                </label>
+                              </div>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <p class="mb-0">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">Platinum</span><br />
+                                  <small>Higher premium, lowest out-of-process-cost</small>
+                                </label>
+                              </div>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <p class="mb-0">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">Gold</span><br />
+                                  <small>Higher premium, lowest out-of-process-cost</small>
+                                </label>
+                              </div>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <p class="mb-1">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">Silver</span><br />
+                                  <small>Higher premium, lowest out-of-process-cost</small>
+                                </label>
+                              </div>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">Bronze</span><br />
+                                  <small>Higher premium, lowest out-of-process-cost</small>
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                        <table style="margin-left: 11px;">
+                          <tr>
+                            <td align="left">
+                              <p class="mb-0">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <span class="colorBlue" style="margin-left:-15px"><b>YEARLY
+                                      DEDUCTABLE</b></span><br />
+
+                                </label>
+                              </div>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">$2500 and less</span><br />
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">$10000 and less</span><br />
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left">
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input marginClass" value="">
+                                  <span class="colorBlue">$15000 and less</span><br />
+                                </label>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10 col-sm-12 col-xs-12 col-lg-10">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value=""
+                                    checked>COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart cartBtn" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value=""
+                                    checked>COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="fd-box auto_width ml-0" style="width: auto;">
+                        <div class="fd-text">
+                          <!--<small>Name</small>-->
+                          <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
+                          <p class="title">Bronze 60 HMO</p>
+                          <p class="subTitle mb-4">HMO</p>
+                          <p class="dollors mb-1">$226.00</p>
+                          <p class="monthlyPremium mb-1">monthly premium</p>
+                          <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
+                          <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
+                          <p class="payInfo">Generic Drugs You pay $18</p>
+                          <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
+                          <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
+                          <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
+                              aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
+                          <p class="mb-1 colorBlue">Quality Rating
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                          </p>
+
+                          <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
+                              style="color:red;font-size: 12px;"></i></p>
+                          <p>
+
+                          <div class="btn-group btnShadow" role="group">
+                            <button type="button" class="btn btn-default borderColor btnPadding">
+                              <div class="form-check">
+                                <label class="form-check-label" style="font-size: 11px;">
+                                  <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                              </div>
+                            </button>
+                            <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                              DETAILS
+                            </button>
+                            <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                              ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="row mt-5 mb-5">
+              <div class="col-md-12">
+                <a class="btn btn-secondary float-right" href="#healthCareNeeds"
+                  onClick="goNext_plans('viewEstimatedup2','six','five')">
+                  Previous
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>     
+      </form>
+    </div>
+  </div>
+  </div>
+
+
+  <footer class="container-fluid main-footer" id="mainFooter">
+  </footer>
+
+</body>
+<script>
+
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
