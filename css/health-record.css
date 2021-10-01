@@ -58,4 +58,6 @@
 .hr-table table tr td{
     padding: 10px 6px;
 }
-
+.checked {
+    color: orange;
+  }

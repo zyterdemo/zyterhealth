@@ -44,6 +44,9 @@
   .checked {
     color: orange;
   }
+  .checked_black{
+    color: black !important;
+  }
   .auto_width{
    width: auto !important;
   }
