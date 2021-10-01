@@ -8,6 +8,7 @@ $(document).ready(
        $("#mainRightSection2").load("main-right-section.html");
        $("#mainRightSection3").load("main-right-section.html");
        $("#mainRightSection4").load("main-right-section.html");
+       $("#mainRightSection5").load("main-right-section.html");
        $("#mainFooter").load("main-footer.html");
 
       // alert(location.pathname.search('my-claims.html'));

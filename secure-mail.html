@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/plan-selection.css">  
   <link rel="stylesheet" href="css/search-results.css">
   <link rel="stylesheet" href="css/secure-mail.css">
+  <link rel="stylesheet" href="css/home-styles/home-page-styles.css">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
   <script src="js/all.min.js"></script>
   <script src="js/jquery.min.js"></script>
@@ -89,7 +90,7 @@
                                         <div class="col-sm-12 col-md-6">
                                             <ul class="list-inline dl mb-0 float-left float-md-right">
                                                 <li class="list-inline-item text-info mr-3">
-                                                    <a href="#">
+                                                    <a href="#" data-target="#nurseAdviceLine_" data-toggle="modal">
                                                         <button class="btn btn-circle btn-success text-white" href="javascript:void(0)">
                                                             <i class="fa fa-plus"></i>
                                                         </button>
@@ -446,6 +447,51 @@
   <footer class="container-fluid main-footer" id="mainFooter">
   </footer>
 
+  <div class="modal fade text-center nal-modal" id="nurseAdviceLine_">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <div class="modal-header">
+          <h2>Compose</h2>
+          <button type="button" class="close" data-dismiss="modal">X</button>
+        </div>
+        <div class="modal-body">
+          <div class="nal-content">
+            <form>
+                <div class="form-group">
+                    <label class="float-left">To...</label>
+                    <input type="text" class="form-control" id="medicationName" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label class="float-left">Cc...</label>
+                    <input type="text" class="form-control" id="medicationName" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label class="float-left">Bcc...</label>
+                    <input type="text" class="form-control" id="medicationName" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label class="float-left">Subject</label>
+                    <input type="text" class="form-control" id="medicationName" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label class="float-left">&nbsp;</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="personal-btns mt-4 float-right">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="btn btn-primary" type="button" data-dismiss="modal">
+                        Send
+                    </button>
+                </div>
+               </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"

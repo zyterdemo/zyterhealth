@@ -235,3 +235,10 @@ a.btn.btn-primary{
 	background: url("../images/google-play-store.png") 0 0 no-repeat;
 	background-size: 128px 40px;
 }	
+#mainRightSection{
+	margin-top: -0px !important;
+}
+.row {   
+    margin-right: -0px !important;
+    margin-left: -0px !important;
+}

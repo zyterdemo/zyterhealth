@@ -44,46 +44,51 @@
   <div class="container-fluid tce-screen">
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-        <h2>Plan Selection </h2>
+        <h2>&nbsp; </h2>
         <!-- <p>Treatment Cost Advisor helps you estimate your costs for hundreds of common conditions, procedures, tests, and health care visits.</p> -->
-        <div class="stepwizard">
-          <div class="stepwizard-row setup-panel">
-            <div class="stepwizard-step col-xs-3">
-              <a href="#personalDetails" type="button" class="btn btn-success btn-circle" id="one">1</a>
-              <p><small>Personal details</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3">
-              <a href="#healthCareNeeds" type="button" class="btn btn-default btn-circle" disabled="disabled"
-                id="two">2</a>
-              <p><small>Health care needs</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3">
-              <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled"
-                id="three">3</a>
-              <p><small>Tell us about your health care</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3">
-              <a href="#viewEstimatedup1" type="button" class="btn btn-default btn-circle" disabled="disabled"
-                id="four">4</a>
-              <p><small>Placeholder</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3">
-              <a href="#viewEstimatedup2" type="button" class="btn btn-default btn-circle" disabled="disabled"
-                id="five">5</a>
-              <p><small>Placeholder</small></p>
-            </div>
-            <div class="stepwizard-step col-xs-3">
-              <a href="#viewPlans" type="button" class="btn btn-default btn-circle" disabled="disabled" id="six">6</a>
-              <p><small>View plans</small></p>
+        <div class="row">
+          <div class="col-md-10">
+            <div class="stepwizard">
+              <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                  <a href="#personalDetails" type="button" class="btn btn-success btn-circle" id="one">1</a>
+                  <p><small>Personal details</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                  <a href="#healthCareNeeds" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                    id="two">2</a>
+                  <p><small>Health care needs</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                  <a href="#viewEstimate" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                    id="three">3</a>
+                  <p><small>Tell us about your health care</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                  <a href="#viewEstimatedup1" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                    id="four">4</a>
+                  <p><small>Placeholder</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                  <a href="#viewEstimatedup2" type="button" class="btn btn-default btn-circle" disabled="disabled"
+                    id="five">5</a>
+                  <p><small>Placeholder</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                  <a href="#viewPlans" type="button" class="btn btn-default btn-circle" disabled="disabled" id="six">6</a>
+                  <p><small>View plans</small></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+       
         <form role="form">
           <!-- <div class="card setup-content" id="personalDetails">              
                 <div class="row"> -->
           <div class="setup-content" id="personalDetails">
             <div class="container-fluid main-content-body homepage-body">
-              <div class="row" style="height: 600px;">
+              <div class="row" style="height: 650px;">
                 <div class="col-lg-10 col-md-9 col-sm-9 col-12">
                   <div class="card">
                     <div class="fd-header">
@@ -235,16 +240,16 @@
 
                     </div>
                   </div>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div id="mainRightSection"></div>
-                  <div>
+                  <div class="mb-4 mr-4">
                     <a class="float-right btn btn-primary mt-4" href="#healthCareNeeds"
                     onClick="goNext_plans('healthCareNeeds','one','two')">
                     Next
                   </a>
                   </div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div id="mainRightSection"></div>                  
                 </div>
               </div>
             </div>          
@@ -646,11 +651,7 @@
 
                     </div>
                     <!-- Search Results -->
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-3 col-sm-3 col-12 mb-5">
-                    <div id="mainRightSection1"></div>
-                    <div class="mt-4 mb-4">
+                    <div class="mr-4 mb-4">
                       <a class="btn btn-primary float-right" href="#healthCareNeeds"
                       onClick="goNext_plans('viewEstimate','two','three')">
                       Next
@@ -660,6 +661,10 @@
                       Previous
                     </a>
                   </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-12 mb-5">
+                    <div id="mainRightSection1"></div>                  
                   </div>
               </div>
              
@@ -720,21 +725,22 @@
                         </div>
                       </div>
                     </div>
+                    <div class="mb-4 mr-4">
+                      <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                      onClick="goNext_plans('viewEstimatedup1','three','four')">
+                      View Plans
+                    </a>
+  
+                    <a class="btn btn-secondary mr-2 float-right" href="#healthCareNeeds"
+                      onClick="goNext_plans('healthCareNeeds','three','two')">
+                      Previous
+                    </a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                   <div id="mainRightSection2"></div>
-                  <div class="mt-4">
-                    <a class="btn btn-primary float-right" href="#healthCareNeeds"
-                    onClick="goNext_plans('viewEstimatedup1','three','four')">
-                    View Plans
-                  </a>
-
-                  <a class="btn btn-secondary mr-2 float-right" href="#healthCareNeeds"
-                    onClick="goNext_plans('healthCareNeeds','three','two')">
-                    Previous
-                  </a>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -794,20 +800,21 @@
                         </div>
                       </div>
                     </div>
+                    <div class="mb-4 mr-4">
+                      <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                      onClick="goNext_plans('viewEstimatedup2','four','five')">
+                      View Plans
+                    </a>
+                    <a class="btn btn-secondary float-right mr-2" href="#healthCareNeeds"
+                      onClick="goNext_plans('viewEstimate','four','three')">
+                      Previous
+                    </a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                   <div id="mainRightSection3"></div>
-                  <div class="mt-4">
-                    <a class="btn btn-primary float-right" href="#healthCareNeeds"
-                    onClick="goNext_plans('viewEstimatedup2','four','five')">
-                    View Plans
-                  </a>
-                  <a class="btn btn-secondary float-right mr-2" href="#healthCareNeeds"
-                    onClick="goNext_plans('viewEstimate','four','three')">
-                    Previous
-                  </a>
-                  </div>
+               
                 </div>
               </div>
             </div>
@@ -867,20 +874,21 @@
                         </div>
                       </div>
                     </div>
+                    <div class="mb-4 mr-4">
+                      <a class="btn btn-primary float-right" href="#healthCareNeeds"
+                      onClick="goNext_plans('viewPlans','five','six')">
+                      View Plans
+                    </a>
+                    <a class="btn btn-secondary mr-2 float-right" href="#healthCareNeeds"
+                      onClick="goNext_plans('viewEstimatedup1','five','four')">
+                      Previous
+                    </a>
+                    </div>
                   </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-3 col-12">
                   <div id="mainRightSection4"></div>
-                  <div class="mt-4">
-                    <a class="btn btn-primary float-right" href="#healthCareNeeds"
-                    onClick="goNext_plans('viewPlans','five','six')">
-                    View Plans
-                  </a>
-                  <a class="btn btn-secondary mr-2 float-right" href="#healthCareNeeds"
-                    onClick="goNext_plans('viewEstimatedup1','five','four')">
-                    Previous
-                  </a>
-                  </div>
+              
                 </div>
               </div>
             </div>
@@ -888,7 +896,7 @@
           <div class="setup-content" id="viewPlans">
             <div class="container-fluid main-content-body homepage-body">
               <div class="row">
-                <div class="col-lg-12 col-md-9 col-sm-9 col-12">
+                <div class="col-lg-10 col-md-9 col-sm-9 col-12 viewPlansHeight">
                   <div class="card">
                     <div class="fd-header">
                       <h2>Veiw Plans</h2>
@@ -896,7 +904,7 @@
                     <div class="row p-2">
                     <div class="col-md-12">
                       <div class="row paragraphReset">
-                        <div class="col-md-2 col-sm-12 col-xs-12 col-lg-2 heightOverflowy">
+                        <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3 heightOverflowy">
                           <div class="fd-box addWidth">
                             <div class="fd-text">
                               <!--<small>Name</small>-->
@@ -916,7 +924,7 @@
                                   </td>
                                 </tr>
                               </table>
-                              <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                              <div id="collapseOne" class="collapse show ml-3" data-parent="#accordion">
                                 <table style="margin-left: 10px;">
                                   <tr>
                                     <td align="left" colspan="2">
@@ -1188,9 +1196,9 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-md-10 col-sm-12 col-xs-12 col-lg-10">
+                        <div class="col-md-9 col-sm-12 col-xs-12 col-lg-9">
                           <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                               <div class="fd-box auto_width ml-0" style="width: auto;">
                                 <div class="fd-text">
                                   <!--<small>Name</small>-->
@@ -1221,15 +1229,15 @@
                                   <div class="btn-group btnShadow" role="group">
                                     <button type="button" class="btn btn-default borderColor btnPadding">
                                       <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
+                                        <label class="form-check-label" style="font-size: 9px;">
                                           <input type="checkbox" class="form-check-input-margin" value=""
-                                            checked>COMPARE</label>
+                                            checked>&nbsp;COMPARE</label>
                                       </div>
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor" style="font-size: 9px;">
                                       DETAILS
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 9px;">
                                       ADD <i class="fa fa-shopping-cart cartBtn" aria-hidden="true"></i>
                                     </button>
                                   </div>
@@ -1238,7 +1246,7 @@
         
                               </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                               <div class="fd-box auto_width ml-0" style="width: auto;">
                                 <div class="fd-text">
                                   <!--<small>Name</small>-->
@@ -1269,15 +1277,15 @@
                                   <div class="btn-group btnShadow" role="group">
                                     <button type="button" class="btn btn-default borderColor btnPadding">
                                       <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
+                                        <label class="form-check-label" style="font-size: 9px;">
                                           <input type="checkbox" class="form-check-input-margin" value=""
-                                            checked>COMPARE</label>
+                                            checked>&nbsp;COMPARE</label>
                                       </div>
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor" style="font-size: 9px;">
                                       DETAILS
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 9px;">
                                       ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                   </div>
@@ -1286,7 +1294,7 @@
         
                               </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                               <div class="fd-box auto_width ml-0" style="width: auto;">
                                 <div class="fd-text">
                                   <!--<small>Name</small>-->
@@ -1317,14 +1325,14 @@
                                   <div class="btn-group btnShadow" role="group">
                                     <button type="button" class="btn btn-default borderColor btnPadding">
                                       <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
-                                          <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                                        <label class="form-check-label" style="font-size: 9px;">
+                                          <input type="checkbox" class="form-check-input-margin" value="">&nbsp;COMPARE</label>
                                       </div>
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor" style="font-size: 9px;">
                                       DETAILS
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 9px;">
                                       ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                   </div>
@@ -1333,57 +1341,11 @@
         
                               </div>
                             </div>
-                            <div class="col-md-3">
-                              <div class="fd-box auto_width ml-0" style="width: auto;">
-                                <div class="fd-text">
-                                  <!--<small>Name</small>-->
-                                  <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
-                                  <p class="title">Bronze 60 HMO</p>
-                                  <p class="subTitle mb-4">HMO</p>
-                                  <p class="dollors mb-1">$226.00</p>
-                                  <p class="monthlyPremium mb-1">monthly premium</p>
-                                  <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
-                                  <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
-                                  <p class="payInfo">Generic Drugs You pay $18</p>
-                                  <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
-                                  <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
-                                  <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
-                                      aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
-                                  <p class="mb-1 colorBlue">Quality Rating
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                  </p>
-        
-                                  <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
-                                      style="color:red;font-size: 12px;"></i></p>
-                                  <p>
-        
-                                  <div class="btn-group btnShadow" role="group">
-                                    <button type="button" class="btn btn-default borderColor btnPadding">
-                                      <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
-                                          <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
-                                      </div>
-                                    </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
-                                      DETAILS
-                                    </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
-                                      ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </button>
-                                  </div>
-                                  </p>
-                                </div>
-        
-                              </div>
-                            </div>
+                           
         
                           </div>
                           <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                               <div class="fd-box auto_width ml-0" style="width: auto;">
                                 <div class="fd-text">
                                   <!--<small>Name</small>-->
@@ -1414,14 +1376,14 @@
                                   <div class="btn-group btnShadow" role="group">
                                     <button type="button" class="btn btn-default borderColor btnPadding">
                                       <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
-                                          <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                                        <label class="form-check-label" style="font-size: 9px;">
+                                          <input type="checkbox" class="form-check-input-margin" value="">&nbsp;COMPARE</label>
                                       </div>
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor" style="font-size: 9px;">
                                       DETAILS
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 9px;">
                                       ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                   </div>
@@ -1430,7 +1392,7 @@
         
                               </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                               <div class="fd-box auto_width ml-0" style="width: auto;">
                                 <div class="fd-text">
                                   <!--<small>Name</small>-->
@@ -1461,14 +1423,14 @@
                                   <div class="btn-group btnShadow" role="group">
                                     <button type="button" class="btn btn-default borderColor btnPadding">
                                       <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
-                                          <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                                        <label class="form-check-label" style="font-size: 9px;">
+                                          <input type="checkbox" class="form-check-input-margin" value="">&nbsp;COMPARE</label>
                                       </div>
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor" style="font-size: 9px;">
                                       DETAILS
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 9px;">
                                       ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                   </div>
@@ -1477,7 +1439,7 @@
         
                               </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                               <div class="fd-box auto_width ml-0" style="width: auto;">
                                 <div class="fd-text">
                                   <!--<small>Name</small>-->
@@ -1508,14 +1470,14 @@
                                   <div class="btn-group btnShadow" role="group">
                                     <button type="button" class="btn btn-default borderColor btnPadding">
                                       <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
-                                          <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
+                                        <label class="form-check-label" style="font-size: 9px;">
+                                          <input type="checkbox" class="form-check-input-margin" value="">&nbsp;COMPARE</label>
                                       </div>
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor" style="font-size: 9px;">
                                       DETAILS
                                     </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
+                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 9px;">
                                       ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                   </div>
@@ -1524,60 +1486,24 @@
         
                               </div>
                             </div>
-                            <div class="col-md-3">
-                              <div class="fd-box auto_width ml-0" style="width: auto;">
-                                <div class="fd-text">
-                                  <!--<small>Name</small>-->
-                                  <img src="./images/logo.png" class="imgWidth" style="background-color: #002C77;" />
-                                  <p class="title">Bronze 60 HMO</p>
-                                  <p class="subTitle mb-4">HMO</p>
-                                  <p class="dollors mb-1">$226.00</p>
-                                  <p class="monthlyPremium mb-1">monthly premium</p>
-                                  <p class="monthlyPremiumSubTitle">after $547.88 monthly savings</p>
-                                  <p class="mb-0 payInfo">Primary Care Visits You pay $65</p>
-                                  <p class="payInfo">Generic Drugs You pay $18</p>
-                                  <p class="yearlyDeduct">Yearly Deductible &nbsp; $12600 / $1000 </p>
-                                  <small class="text-muted yearlyDeduct float-right mr-4">(May Not Apply)</small>
-                                  <p class="mb-1 colorBlue whiteSpace">Total Expense Estimate Lower <i class="fa fa-flag"
-                                      aria-hidden="true" style="color: rgb(132, 156, 132);font-size: 12px;"></i></p>
-                                  <p class="mb-1 colorBlue">Quality Rating
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                    <span class="fa fa-star checked"></span>
-                                  </p>
-        
-                                  <p class="colorBlue">Dr.Olive Gold... <i class="fa fa-ban" aria-hidden="true"
-                                      style="color:red;font-size: 12px;"></i></p>
-                                  <p>
-        
-                                  <div class="btn-group btnShadow" role="group">
-                                    <button type="button" class="btn btn-default borderColor btnPadding">
-                                      <div class="form-check">
-                                        <label class="form-check-label" style="font-size: 11px;">
-                                          <input type="checkbox" class="form-check-input-margin" value="">COMPARE</label>
-                                      </div>
-                                    </button>
-                                    <button type="button" class="btn btn-default borderColor" style="font-size: 11px;">
-                                      DETAILS
-                                    </button>
-                                    <button type="button" class="btn btn-default borderColor cartBtn" style="font-size: 11px;">
-                                      ADD <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                    </button>
-                                  </div>
-                                  </p>
-                                </div>
-        
-                              </div>
-                            </div>
+                            
                           </div>
         
                         </div>
                       </div>
                     </div>
                     </div>
+                    <div class="mb-4 mr-4 mt-2">                     
+                      <a class="btn btn-secondary float-right" href="#healthCareNeeds"
+                      onClick="goNext_plans('viewEstimatedup2','six','five')">
+                      Previous
+                    </a>
+                    </div>
                   </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-3 col-12">
+                  <div id="mainRightSection5"></div>
+              
                 </div>
               </div>
             </div>
