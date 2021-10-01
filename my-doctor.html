@@ -14,6 +14,24 @@
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/common-sections.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      $(document).ready(function () {
+          $("#hideData").hide();
+          $("#hide").click(function () {
+              // $("body").css("height", "1500px");  
+              $("#dataHide").hide();
+              $("#dataHide_").hide();
+              $("#hideData").show();
+          });
+          $("#show").click(function () {                
+              $("#dataHide").show();
+              $("#hideData").hide();
+              $("#hideData_").hide();
+              // $("body").css("height", "100%");  
+          });
+      });
+  </script>
 </head>
 <body>
 
@@ -74,17 +92,29 @@
               <a class="btn btn-primary" data-target="#bookAppointment" data-toggle="modal">
                 Book an Appointment
               </a>
-              <a class="btn btn-outline-primary navigate-btn" href="https://www.google.co.in/maps/dir/Residence+Inn+Jacksonville+Mayo+Clinic+Area,+San+Pablo+Road+South,+Jacksonville,+FL,+USA/Mayo+Clinic,+4500+San+Pablo+Rd+S,+Jacksonville,+FL+32224,+United+States/@30.2594874,-81.4451818,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x88e44b60c1f802cb:0xa885d74482791915!2m2!1d-81.4364632!2d30.255069!1m5!1m1!1s0x88e5ca0d9d4a9c93:0x283a45ab0117ea03!2m2!1d-81.4451456!2d30.2626481!3e0" target="_blank">
+              <a class="btn btn-outline-primary navigate-btn" role="button" id="hide">
                   Navigate
               </a>
                 <a class="btn btn-primary" href="#">
                     Set as PCP
                 </a>
             </div>  
-          </div>
-            <div class="map-area" style="height: 300px;">
-                <!-- <img src="./images/map1.png"/> -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6892.428358980191!2d-81.44518177440746!3d30.259478127218163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x88e44b60c1f802cb%3A0xa885d74482791915!2sResidence%20Inn%20Jacksonville%20Mayo%20Clinic%20Area%2C%20San%20Pablo%20Road%20South%2C%20Jacksonville%2C%20FL%2C%20USA!3m2!1d30.255069!2d-81.43646319999999!4m5!1s0x88e5ca0d9d4a9c93%3A0x283a45ab0117ea03!2sMayo%20Clinic%2C%204500%20San%20Pablo%20Rd%20S%2C%20Jacksonville%2C%20FL%2032224%2C%20United%20States!3m2!1d30.2626481!2d-81.44514559999999!5e0!3m2!1sen!2sin!4v1633090152697!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                
+          </div> 
+          <div class="row mt-5">
+            <div class="col-md-12">
+                <table width="100%" align="center">
+                    <tr>
+                        <td align="center">
+                            <p class="mt-5 mb-3 mapFonts" id="dataHide">Click on "Navigate" for real time navigation</p>
+                            <img src="./images/map1.png" id="dataHide_" style="width: 100%;opacity: 0.3;"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>     
+            <div class="map-area" id="hideData">
+                <!-- <img src="./images/map1.png"/> -->              
+                <iframe  src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d6892.428358980191!2d-81.44518177440746!3d30.259478127218163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x88e44b60c1f802cb%3A0xa885d74482791915!2sResidence%20Inn%20Jacksonville%20Mayo%20Clinic%20Area%2C%20San%20Pablo%20Road%20South%2C%20Jacksonville%2C%20FL%2C%20USA!3m2!1d30.255069!2d-81.43646319999999!4m5!1s0x88e5ca0d9d4a9c93%3A0x283a45ab0117ea03!2sMayo%20Clinic%2C%204500%20San%20Pablo%20Rd%20S%2C%20Jacksonville%2C%20FL%2032224%2C%20United%20States!3m2!1d30.2626481!2d-81.44514559999999!5e0!3m2!1sen!2sin!4v1633090152697!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                
                 <br/>
             </div>
         </div>

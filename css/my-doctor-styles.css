@@ -76,3 +76,10 @@
     height: 300px;
     object-fit: cover;
 }
+.mapFonts{
+    margin-top: 185px !important;
+    position: absolute;
+    font-size: 21px;
+    font-weight: 700;
+    margin-left: 30%;
+}
